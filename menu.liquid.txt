@@ -68,12 +68,5 @@
 		</li>
 		{% endif %}
 		{% endfor %}
-		{%- if settings.header_live_show -%} 
-		<li class="item-live"> 
-			<div class="header-box-live">
-				<button type="button" class="btn-live">{{settings.header_live_txt}}</button>
-			</div>
-		</li>
-		{%- endif -%}
-	</ul>  
+	</ul>
 </nav>
