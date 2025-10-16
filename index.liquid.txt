@@ -1,0 +1,371 @@
+{%if settings.home_slider_show%}{% include 'homepage-slider'%}{%endif%}
+
+<div class="section-home-pus-promotion pus-promotion-grids">
+	<div class="container">
+		<div class="hrv-pus-promotion" data-hrvpus-layout="flashsale"></div>
+	</div>
+</div>
+<div class="section-home-hrvpmo hrvpmo-grids">
+	<div class="container">
+		<div class="hrv-pmo-coupon" data-hrvpmo-layout="grids"></div>
+		<div class="hrv-pmo-discount" data-hrvpmo-layout="grids"></div>
+	</div>
+</div>
+{%if settings.show_index_category%}
+<section class="section-index-category">
+	<div class="container">
+		<div class="row justify-content-center">
+			{%for i in (1..3)%}
+			{%capture show%}show_index_category_{{i}}{%endcapture%}
+			{%capture img%}index_category_{{i}}_img.jpg{%endcapture%}
+			{%capture title%}index_category_{{i}}_title{%endcapture%}
+			{%capture desc%}index_category_{{i}}_desc{%endcapture%}
+			{%capture btn%}index_category_{{i}}_btn{%endcapture%}
+			{%capture link%}index_category_{{i}}_link{%endcapture%}
+			{%capture color1%}index_category_{{i}}_color_1{%endcapture%}
+			{%capture color2%}index_category_{{i}}_color_2{%endcapture%}
+			{%capture color3%}index_category_{{i}}_color_3{%endcapture%}
+			{%capture color4%}index_category_{{i}}_color_4{%endcapture%}
+			{%capture color5%}index_category_{{i}}_color_5{%endcapture%}
+			{%if settings[show]%}
+			<div class="col-lg-4 col-12">
+				<div class="category-item">
+					<div class="item-img">
+						<img src="{{ img | asset_url}}" alt="{{settings[title]}}" />
+					</div>
+					<div class="item-detail" style="--color1: {{settings[color1]}};--color2: {{settings[color2]}};--color3: {{settings[color3]}};--color4: {{settings[color4]}};--color5: {{settings[color5]}};">
+						{%if settings[title] != ''%}<h2 class="title">{{settings[title]}}</h2>{%endif%}
+						{%if settings[desc] != ''%}<p class="desc">{{settings[desc]}}</p>{%endif%}
+						{%if settings[btn] != ''%}
+						<div class="btn-more">
+							<a href="{{settings[link]}}" class="btn-banner {%if settings[color1] == '#ffffff'%}bg-w{%endif%}">
+								<span>{{settings[btn]}}</span>
+							</a>
+						</div>
+						{%endif%}
+					</div>
+				</div>
+			</div>
+			{%endif%}
+			{%endfor%}
+		</div>
+	</div>
+</section>
+{%endif%}
+{%if settings.show_index_policy%}
+<section class="section-index-policy">
+	<div class="container">
+		<div class="row justify-content-center">
+			{%for i in (1..4)%}
+			{%capture show%}show_index_policy_{{i}}{%endcapture%}
+			{%capture img%}index_policy_{{i}}_img.jpg{%endcapture%}
+			{%capture title%}index_policy_{{i}}_title{%endcapture%}
+			{%capture desc%}index_policy_{{i}}_desc{%endcapture%}
+			{%if settings[show]%}
+			<div class="col-lg-3 col-md-6 col-12">
+				<div class="policy-item text-center">
+					<div class="item-header">
+						<div class="icon">
+							<img src="{{ img | asset_url}}" alt="{{settings[title]}}" />
+						</div>
+						<div class="title">
+							{{settings[title]}}
+						</div>
+					</div>
+					<div class="item-desc">
+						{{settings[desc]}}
+					</div>
+				</div>
+			</div>
+			{%endif%}
+			{%endfor%}
+		</div>
+	</div>
+</section>
+{%endif%}
+{%if settings.show_index_collection_1%}
+<section class="section-index-collection-1">
+	<div class="container">
+		{%if settings.index_collection_1_title != ''%}
+		<div class="heading-title text-center">
+			<h2 class="title">{{settings.index_collection_1_title}}</h2>
+		</div>
+		{%endif%}
+		<div class="row">
+			{%if settings.show_index_collection_banner%}
+			<div class="col-lg-4 col-12">
+				<div class="banner-slider owl-carousel">
+					{%for i in (1..3)%}
+					{%capture show%}show_index_collection_banner_{{i}}{%endcapture%}
+					{%capture img%}index_collection_banner_{{i}}_img.jpg{%endcapture%}
+					{%capture alt%}index_collection_banner_{{i}}_alt{%endcapture%}
+					{%capture link%}index_collection_banner_{{i}}_link{%endcapture%}
+					{%if settings[show]%}
+					<div class="banner-item">
+						<a href="{{settings[link]}}"><img src="{{ img | asset_url}}" alt="{{settings[alt]}}" /></a>
+					</div>
+					{%endif%}
+					{%endfor%}
+				</div>
+			</div>
+			{%endif%}
+			<div class="{%if settings.show_index_collection_banner%}col-lg-8 has-banner{%endif%} col-12">
+				{%- if collections[settings.index_collection_1_handle].products.size == 0 -%}
+				<div class="product-noloop">
+					<div class="collection-alert-no"><p>Chưa có sản phẩm nào trong danh mục này</p></div>
+				</div>
+				{%- else -%}
+				<div class="list-product">
+					{%- for product in collections[settings.index_collection_1_handle].products limit: 6 -%}
+					{%- include 'product-loop-slider' -%}
+					{%- endfor -%}	
+				</div>
+				{%- endif -%}
+			</div>
+		</div>
+	</div>
+</section>
+{%endif%}
+{%if settings.show_index_banner%}
+<section class="section-index-banner">
+	<div class="container">
+		<div class="row justify-content-center">
+			{%for i in (1..2)%}
+			{%capture show%}show_index_banner_{{i}}{%endcapture%}
+			{%capture img%}index_banner_{{i}}_img.jpg{%endcapture%}
+			{%capture title%}index_banner_{{i}}_title{%endcapture%}
+			{%capture btn%}index_banner_{{i}}_btn{%endcapture%}
+			{%capture link%}index_banner_{{i}}_link{%endcapture%}
+			{%if settings[show]%}
+			<div class="col-lg-6 col-12">
+				<div class="banner-item">
+					<div class="item-img">
+						<img src="{{ img | asset_url}}" alt="{{settings[title]}}" />
+					</div>
+					<div class="item-detail">
+						{%if settings[title] != ''%}<h2 class="title">{{settings[title]}}</h2>{%endif%}
+						{%if settings[btn] != ''%}<a href="{{settings[link]}}">{{settings[btn]}}</a>{%endif%}
+					</div>
+				</div>
+			</div>
+			{%endif%}
+			{%endfor%}
+		</div>
+	</div>
+</section>
+{%endif%}
+{%if settings.show_index_collection_tab%}
+<section class="section-index-collection-tab">
+	<div class="container">
+		{%if settings.index_collection_tab_title != ''%}
+		<div class="heading-title text-center">
+			<h2 class="title">{{settings.index_collection_tab_title}}</h2>
+		</div>
+		{%endif%}
+		<div class="collection-tab">
+			{%assign title_html = ''%}
+			{%assign detail_html = ''%}
+			{%for i in (1..4)%}
+			{%capture show%}show_index_collection_tab_{{i}}{%endcapture%}
+			{%capture title%}index_collection_tab_{{i}}_title{%endcapture%}
+			{%capture handle%}index_collection_tab_{{i}}_handle{%endcapture%}
+			{%if settings[show]%}
+			{%capture title_item%}<li class="title" data-id="col-tab-{{i}}" data-handle="{{settings[handle]}}"><span>{{settings[title]}}</span></li>{%endcapture%}
+			{%capture detail_item%}<div class="detail" id="col-tab-{{i}}"></div>{%endcapture%}
+
+			{%assign title_html = title_html | append: title_item %}
+			{%assign detail_html = detail_html | append: detail_item %}
+			{%endif%}
+			{%endfor%}
+
+			<div class="tab-title">
+				<ul class="list-title">
+					{{title_html}}
+				</ul>
+			</div>
+			<div class="tab-detail">
+				{{detail_html}}
+			</div>
+		</div>
+	</div>
+</section>
+{%endif%}
+{%if settings.show_index_review%}
+<section class="section-index-review">
+	<div class="container">
+		{%if settings.index_review_title != ''%}
+		<div class="heading-title text-center">
+			<h2 class="title">{{settings.index_review_title}}</h2>
+		</div>
+		{%endif%}
+		<div class="list-review owl-carousel">
+			{%for i in (1..10)%}
+			{%capture show%}show_index_review_{{i}}{%endcapture%}
+			{%capture img%}index_review_{{i}}_img.jpg{%endcapture%}
+			{%capture name%}index_review_{{i}}_name{%endcapture%}
+			{%capture position%}index_review_{{i}}_position{%endcapture%}
+			{%capture desc%}index_review_{{i}}_desc{%endcapture%}
+			{%if settings[show]%}
+			<div class="review-item text-center">
+				<div class="item-left">
+					<div class="icon">
+						<img src="{{ img | asset_url}}" alt="{{settings[name]}}" />
+					</div>
+					<div class="info">
+						{%if settings[name] != ''%}<p class="name">{{settings[name]}}</p>{%endif%}
+						{%if settings[position] != ''%}<p class="position">{{settings[position]}}</p>{%endif%}
+					</div>
+				</div>
+				<div class="item-right">
+					<span class="icon-quote"><svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M5.55859 9.07812H5.96875C7.08203 9.07812 8.07812 9.50781 8.95703 10.3672C9.85547 11.207 10.3047 12.2617 10.3047 13.5312C10.3047 14.7812 9.85547 15.8164 8.95703 16.6367C8.07812 17.4375 6.98438 17.8379 5.67578 17.8379C4.25 17.8379 3.05859 17.2715 2.10156 16.1387C1.16406 14.9863 0.695312 13.3555 0.695312 11.2461C0.695312 9.3125 1.10547 7.50586 1.92578 5.82617C2.76562 4.12695 3.78125 2.78906 4.97266 1.8125C6.18359 0.816406 7.25781 0.318359 8.19531 0.318359C8.82031 0.318359 9.30859 0.503906 9.66016 0.875C10.0117 1.24609 10.1875 1.72461 10.1875 2.31055C10.1875 3.16992 9.80664 3.80469 9.04492 4.21484C8.00977 4.78125 7.18945 5.44531 6.58398 6.20703C5.97852 6.96875 5.63672 7.92578 5.55859 9.07812ZM18.5078 9.07812H18.8887C19.9824 9.07812 20.9688 9.50781 21.8477 10.3672C22.7461 11.207 23.1953 12.2617 23.1953 13.5312C23.1953 14.7617 22.7461 15.7969 21.8477 16.6367C20.9688 17.4766 19.875 17.8965 18.5664 17.8965C17.1211 17.8965 15.9297 17.3105 14.9922 16.1387C14.0547 14.9668 13.5859 13.3359 13.5859 11.2461C13.5859 9.74219 13.8301 8.32617 14.3184 6.99805C14.8066 5.66992 15.4316 4.51758 16.1934 3.54102C16.9746 2.54492 17.8047 1.76367 18.6836 1.19727C19.582 0.611328 20.3828 0.318359 21.0859 0.318359C21.7305 0.318359 22.2188 0.503906 22.5508 0.875C22.9023 1.22656 23.0781 1.70508 23.0781 2.31055C23.0781 3.18945 22.6973 3.82422 21.9355 4.21484C20.8613 4.82031 20.0508 5.49414 19.5039 6.23633C18.957 6.95898 18.625 7.90625 18.5078 9.07812Z"/> </svg></span>
+					{%if settings[desc] != ''%}<p class="desc">{{settings[desc]}}</p>{%endif%}
+				</div>
+			</div>
+			{%endif%}
+			{%endfor%}
+		</div>
+	</div>
+</section>
+{%endif%}
+{%if settings.show_index_flashsale%}
+<section class="section-index-flashsale">
+	<div class="container">
+		{%if settings.index_flashsale_title != ''%}
+		<div class="heading-title text-center">
+			{%if settings.index_flashsale_time != ''%}
+			<div class="icon-nav icon-prev hidden">
+				<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g transform="matrix(-1,-1.2246467991473532e-16,1.2246467991473532e-16,-1,511.9994964599609,511.99959468841564)"><g><g><path d="M367.954,213.588L160.67,5.872c-7.804-7.819-20.467-7.831-28.284-0.029c-7.819,7.802-7.832,20.465-0.03,28.284l207.299,207.731c7.798,7.798,7.798,20.486-0.015,28.299L132.356,477.873c-7.802,7.819-7.789,20.482,0.03,28.284c3.903,3.896,9.016,5.843,14.127,5.843c5.125,0,10.25-1.958,14.157-5.873l207.269-207.701C391.333,275.032,391.333,236.967,367.954,213.588z"></path></g></g></g></svg>
+			</div>
+			<h2 class="title">{{settings.index_flashsale_title}}</h2>
+			<div class="icon-nav icon-next hidden">
+				<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g><g><path d="M367.954,213.588L160.67,5.872c-7.804-7.819-20.467-7.831-28.284-0.029c-7.819,7.802-7.832,20.465-0.03,28.284l207.299,207.731c7.798,7.798,7.798,20.486-0.015,28.299L132.356,477.873c-7.802,7.819-7.789,20.482,0.03,28.284c3.903,3.896,9.016,5.843,14.127,5.843c5.125,0,10.25-1.958,14.157-5.873l207.269-207.701C391.333,275.032,391.333,236.967,367.954,213.588z"></path></g></g></g></svg>
+			</div>
+			{%else%}
+			<h2 class="title">{{settings.index_flashsale_title}}</h2>
+			{%endif%}
+		</div>
+		{%endif%}
+		<div class="list-product owl-carousel">
+			{%- for product in collections[settings.index_flashsale_handle].products limit: settings.index_flashsale_limit -%}
+			<div class="flashsale-item">
+				{%- include 'product-loop-flashsale' -%}
+			</div>
+			{%- endfor -%}	
+		</div>
+	</div>
+</section>
+{%endif%}
+{%if settings.show_index_blog%}
+<section class="section-index-blog">
+	<div class="container">
+		{%if settings.index_blog_title != ''%}
+		<div class="heading-title text-center">
+			<h2 class="title">{{settings.index_blog_title}}</h2>
+		</div>
+		{%endif%}
+		{%if blogs[settings.index_blog_handle].articles.size == 0%}
+		<p class="txt-noArticle">Chưa có bài viết nào trong mục này</p>
+		{%else%}
+		<div class="list-blog owl-carousel">
+			{% for article in blogs[settings.index_blog_handle].articles limit: settings.index_blog_limit %}
+			{% include 'article-image' with article:article %}
+			<article class="item-article">
+				<div class="row article-inner align-items-center">				
+					<div class="col-lg-6 col-12 article-image">
+						<a href="{{ article.url}}" class="blog-post-thumbnail" title="{{ article.title }}" rel="nofollow">
+							<img class="lazyload" {%if forloop.first%} src="{{ imageUrl | product_img_url : '1024x1024' }}"{%else%}data-src="{{ imageUrl | product_img_url : 'grande' }}"{%endif%} alt="{{ article.title }}" >
+						</a>
+					</div>
+					<div class="col-lg-6 col-12 article-detail">
+						<div class="article-post-meta">  
+							<span class="date">                
+								<time pubdate datetime="{{ article.published_at | date: '%d Tháng %m, %Y' }}">{{ article.published_at | date: 'Tháng %m, %Y' }}</time>
+							</span>
+							<span class="author">bởi: {{article.author}}</span>
+							{% if blog.comments_enabled? %}
+							<span class="comment"><i class="comment-icon fa fa-comment-o"></i>
+								<a href="{{ article.url }}">
+									{{ article.comments_count }}<span> {{ article.comments_count | pluralize: 'Bình luận','Bình luận' }}</span>
+								</a>
+							</span>
+							{% endif %}	
+						</div>	
+						<div class="article-title">
+							<h3 class="post-title">
+								<a href="{{ article.url}}" title="{{ article.title }}">{{ article.title }}</a>
+							</h3>
+						</div>		
+						<p class="entry-content">{{ article.content | strip_html | truncatewords: 35 }}</p>
+
+						<div class="btn-more">
+							<a href="{{ article.url }}" class="button">Xem thêm</a>
+						</div>				
+					</div>
+				</div>						
+			</article>
+			{% endfor %}
+		</div>     
+		{%endif%}
+	</div>
+</section>
+{%endif%}
+{%if settings.show_index_saleday%}
+<section class="section-index-saleday">
+	<div class="container">
+		<div class="row align-items-center saleday-bg">
+			<div class="col-lg-6 col-12">
+				<div class="sale-img">
+					<img src="{{ 'index_saleday_img.jpg' | asset_url}}" alt="{{settings.index_saleday_title}}" />
+				</div>
+			</div>
+			<div class="col-lg-6 col-12">
+				<div class="sale-detail">
+					{%if settings.index_saleday_title != ''%}
+					<div class="heading-title">
+						<h2 class="title">{{settings.index_saleday_title}}</h2>
+					</div>
+					{%endif%}
+					{%if settings.index_saleday_desc != ''%}<p class="desc">{{settings.index_saleday_desc}}</p>{%endif%}
+					{%if settings.index_saleday_time != ''%}
+					{%assign time_sale = settings.index_saleday_time | replace:'/','-' | replace: ';','T'%}
+					<div class="saleday-countdown">
+						<div class="countdown-sale" data-target="{{time_sale}}"></div>
+					</div>
+					{%endif%}
+					{%if settings.index_saleday_btn != ''%}
+					<div class="btn-more">
+						<a href="{{settings.index_saleday_link}}" class="button">{{settings.index_saleday_btn}}</a>
+					</div>
+					{%endif%}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{%endif%}
+{%if settings.show_index_gallery%}
+<section class="section-index-gallery">
+	<div class="container">
+		{%if settings.index_gallery_title != ''%}
+		<div class="heading-title text-center">
+			<h2 class="title">{{settings.index_gallery_title}}</h2>
+		</div>
+		{%endif%}
+		<div class="row list-gallery">
+			{%for i in (1..6)%}
+			{%capture show%}show_index_gallery_{{i}}{%endcapture%}
+			{%capture img%}index_gallery_{{i}}_img.jpg{%endcapture%}
+			{%capture alt%}index_gallery_{{i}}_alt{%endcapture%}
+			{%capture link%}index_gallery_{{i}}_link{%endcapture%}
+			{%if settings[show]%}
+			<div class="gallery-item">
+				<a href="{{settings[link]}}"><img src="{{ img | asset_url}}" alt="{{settings[alt]}}" /></a>
+			</div>
+			{%endif%}
+			{%endfor%}
+		</div>
+	</div>
+</section>
+{%endif%}
+
+
