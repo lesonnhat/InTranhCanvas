@@ -93,17 +93,6 @@
 								 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
 								 alt="{% if product.featured_image.alt.size > 0 %}{{ product.featured_image.alt | strip_html | escape }}{% else%} {{product.title | strip_html | escape}} {% endif %}"  />
 					</picture>		
-				</div>					
-				<div class="lazy-img second-image hovered-img d-none d-lg-block">	
-					<picture>
-						<source media="(min-width: 481px) and (max-width:767px)" data-srcset="{{ product.images[1] | product_img_url: 'large' }}"
-										srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-						<source media="(min-width:768px)" data-srcset="{{ product.images[1] | product_img_url: 'grande' }}"
-										srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-						<img  class="lazyload img-loop " data-src="{{ product.images[1] | product_img_url: 'small' }}" 
-								 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-								 alt="{% if product.featured_image.alt.size > 1 %}{{ product.featured_image.alt | strip_html | escape}}{% else%} {{product.title | strip_html | escape}} {% endif %}"/>
-					</picture>
 				</div>
 				{% else %}
 				<div class="lazy-img">
@@ -119,17 +108,14 @@
 				</div>				
 				{% endif %}
 			</div>
-			<div class="quickview-product">
-				<a class="icon-quickview {% if is_preorder_prodloop %}is-preorder{%endif%}" href="javascript:void(0)" name="icon quickview" data-handle="{{product.url}}" title="Xem nhanh"><i class="fa fa-eye" aria-hidden="true"></i></a>
-			</div>
-			<a href="{{product.url}}" class="proloop-link quickview-product" data-handle="{{product.url}}" title="{{product.title}}" ></a>
+			<a href="{{product.url}}" class="proloop-link" data-handle="{{product.url}}" title="{{product.title}}" ></a>
 		</div>
 		<div class="proloop-detail">
 			{%- if settings.prod_variant_show -%}{%- include 'product-loop--options' -%}	{%- endif -%}
 			{%- if settings.prod_vendor_show -%}
 			{%- unless product.vendor == 'Khác' -%}<p class="proloop--vendor">{{product.vendor | link_to_vendor}}</p>{%- endunless -%}
 			{%- endif -%}
-			<h3><a href="{{product.url}}" class="quickview-product" data-handle="{{product.url}}">{{ product.title }}</a></h3>
+			<h3><a href="{{product.url}}">{{ product.title }}</a></h3>
 			{%- if settings.productreviews_hrvapp_use and settings.productreviews_hrvapp_proloop -%}
 			<div class="proloop--review">
 				<!--  check review -->
@@ -142,34 +128,19 @@
 			</div>	
 			{%- endif -%}
 			
-			<div class="wrapper-action-loop ">
-				{%- unless price_zero -%}
-				<p class="proloop--price {% if on_sale %}on-sale{% endif %}  {% if settings.add_to_cart_show%} prices-ctas {%endif%}">
-					<span class="price">{{ product.variants.first.price | money }}</span>
-					{%- if on_sale -%}			
-					<span class="price-del">{{ product.variants.first.compare_at_price | money }}</span>
-					<span class="pro-percent">-{{price_sale}}%</span>
-					{%- endif -%}
-					{%- if sold_out -%} <span class="prohzt-soldout">Hết hàng</span>{%- endif -%}
-				</p>
-				{%- endunless -%}
-				{%- if price_zero or check_gift-%}
-					<div class="proloop-actions">
-							<div class="proloop-actions__inner">
-						{%- if check_gift -%}
-						<a href="{{product.url}}" class="btn-proloop btn-proloop-gift"  title="{{product.title}}" >
-							<span>Hàng tặng không bán</span>
-						</a>
-						{%- else -%}
-						<a href="{{settings.prod_pricezero_link}}" 
-							 class="btn-proloop btn-proloop-contact">{{settings.prod_pricezero_title}}	</a>	
-						{%- endif -%}
-						</div>
-					</div>
-				{% else %}
-					{%- if settings.add_to_cart_show and settings.shop_buying and product.variants.first.price > 0 -%} {% include 'product-loop--ctas' %}	{%- endif -%}
-				{%- endif -%}
-			</div>
+			<div class="wrapper-action-loop">
+        {%- unless price_zero -%}
+        <p class="proloop--price {% if on_sale %}on-sale{% endif %}">
+          <span class="price">{{ product.variants.first.price | money }}</span>
+          {%- if on_sale -%}
+            <span class="price-del">{{ product.variants.first.compare_at_price | money }}</span>
+            <span class="pro-percent">-{{price_sale}}%</span>
+          {%- endif -%}
+          {%- if sold_out -%} <span class="prohzt-soldout">Hết hàng</span>{%- endif -%}
+        </p>
+        {%- endunless -%}
+      </div>
+      
 		</div>
 	</div>
 	<script async>
@@ -195,6 +166,3 @@
 		});
 	</script>
 </div>
-
-
-
