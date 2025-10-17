@@ -81,33 +81,19 @@
 			</div>
 			{%-endif-%}
 			
-			<div class="product--image">		
-				{% if product.images.size > 1 %}
-				<div class="lazy-img first-image">
-					<picture>
-						<source media="(max-width: 480px)" data-srcset="{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'large' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}"
-										srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-						<source media="(min-width: 481px)" data-srcset="{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'grande' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}"
-										srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-						<img class="lazyload img-loop " data-src="{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'small' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}" 
-								 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-								 alt="{% if product.featured_image.alt.size > 0 %}{{ product.featured_image.alt | strip_html | escape }}{% else%} {{product.title | strip_html | escape}} {% endif %}"  />
-					</picture>		
-				</div>
-				{% else %}
-				<div class="lazy-img">
-					<picture>
-						<source media="(max-width: 480px)" data-srcset="{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'large' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}"
-										srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-						<source media="(min-width: 481px)" data-srcset="{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'grande' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}"
-										srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-						<img class="lazyload img-loop " data-src="{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'small' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}" 
-								 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-								 alt="{% if product.featured_image.alt.size >0 %}{{ product.featured_image.alt | strip_html | escape }}{% else%} {{product.title | strip_html | escape}} {% endif %}"  />
-					</picture>		
-				</div>				
-				{% endif %}
-			</div>
+			{% assign _img = product.featured_image | default: product.images.first %}
+
+      <div class="product--image">
+        <div class="first-image" style="position:relative;width:100%;height:0;padding-bottom:100%;overflow:hidden;">
+          <img
+            class="img-loop"
+            src="{{ _img.src | product_img_url: 'grande' }}"
+            alt="{{ _img.alt | default: product.title | strip_html | escape }}"
+            style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:1;"
+          >
+        </div>
+      </div>
+
 			<a href="{{product.url}}" class="proloop-link" data-handle="{{product.url}}" title="{{product.title}}" ></a>
 		</div>
 		<div class="proloop-detail">
