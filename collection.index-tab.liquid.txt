@@ -1,5 +1,5 @@
 {%layout none%}
-{%paginate collection.products by 9 %}
+{%paginate collection.products by 8 %}
 {% if collection.products.size == 0 %}
 <p class="pro-no text-center">Chưa có sản phẩm nào trong danh mục này</p>
 {%else%}
@@ -10,7 +10,7 @@
 	</div>
 	{%endfor%}
 </div>
-{% if collection.products.size > 9 and settings.index_collection_tab_btn != '' %}
+{% if collection.products.size > 8 and settings.index_collection_tab_btn != '' %}
 <div class="btn-more text-center">
 	<a href="{{collection.url}}" class="button">{{settings.index_collection_tab_btn}}</a>
 </div>
