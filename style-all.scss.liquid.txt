@@ -5211,17 +5211,6 @@ background-image: none;
 	.proloop-image {
 		position: relative;
 		overflow: hidden;
-		.pro-sale,
-		.pro-sale {
-			left: 7px;
-			background: red;
-			letter-spacing: 0.5px;
-			min-width: 40px;
-			text-align: center;
-		}
-		.pro-sale {
-			top: 32px
-		}
 		.product--image {
 			position: relative;
 			.lazy-img.second-image {
@@ -5725,9 +5714,6 @@ background-image: none;
 				display: none;
 			}
 		}
-		.pro-sale {
-			display: none;
-		}
 		.pro-percent {
 			display: inline-block;
 			min-width: 36px;
@@ -5923,7 +5909,7 @@ background-image: none;
 			.proloop-image {
 				width: 110px;
 			}
-			.proloop-image .pro-sale,
+			.proloop-image,
 			.proloop--variant {
 				display: none
 			}
