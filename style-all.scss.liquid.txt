@@ -4896,7 +4896,7 @@ background-image: none;
 .mainFooter{
 	margin: 60px 0 0;padding-top: 60px;
 	background-color: var(--shop-bg-ft);
-	color: rgba($colorFt, 0.6);
+	color: rgba($colorFt, 1);
 	&:not(.template-index){
 		border-top: 1px solid var(--shop-color-border);
 	}
@@ -4985,7 +4985,7 @@ background-image: none;
 				margin-bottom: 10px;
 			}
 			a{
-				color: rgba($colorFt, 0.6);
+				color: rgba($colorFt, 1);
 				&:hover{
 					color: var(--shop-color-hover);
 				}
