@@ -326,7 +326,7 @@
 		</div>
 		{%endif%}
 		<div class="row list-gallery">
-			{%for i in (1..6)%}
+			{%for i in (1..5)%}
 			{%capture show%}show_index_gallery_{{i}}{%endcapture%}
 			{%capture img%}index_gallery_{{i}}_img.jpg{%endcapture%}
 			{%capture alt%}index_gallery_{{i}}_alt{%endcapture%}
