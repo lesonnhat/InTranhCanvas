@@ -1,7 +1,7 @@
 $colorMain: {{settings.shop_main_color}};
 $colorText: {{settings.shop_text_color}};	
 [class^="section-index-"] {
-	padding: 80px 0 0;
+	padding: 60px 0 0;
 }
 @media(max-width: 767px){
 	[class^="section-index-"] {
@@ -626,7 +626,7 @@ $colorText: {{settings.shop_text_color}};
 		}
 	}
 	@media(min-width: 992px){
-		.heading-title .title{padding-left: 0;margin-top: -40px;margin-bottom: 20px;}
+		.heading-title .title{padding-left: 0;margin-top: -38px;margin-bottom: 22px;}
 	}
 	@media(max-width: 991px){
 		.row{gap: 35px;}
