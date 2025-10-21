@@ -106,6 +106,17 @@
 																})(window,document,'script','dataLayer','GTM-NP8HFM8');</script>
 		<!-- End Google Tag Manager -->	
 		{% endcomment %}
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0VZ1R8XHDJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-0VZ1R8XHDJ');
+    </script>
+    
 	</head>
 	<body class="mainBody-theme {% if  cart.item_count > 0 %} mainBody-mbcart {% endif %} {% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" itemscope itemtype="http://schema.org/Website">
 		{% comment %}<!-- Google Tag Manager (noscript) -->
