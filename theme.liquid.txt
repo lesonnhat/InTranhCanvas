@@ -153,6 +153,41 @@
 		{%- include 'sidebar-main' -%}
 		{%- include 'addthis-sharing' -%}
 		{%- include 'footer-scripts' -%}
-		
+
+    <div id="galleryLightbox" class="lb" aria-hidden="true">
+      <button class="lb__close" aria-label="Đóng">&times;</button>
+      <img class="lb__img" alt="">
+    </div>
+    
+    <script>
+      document.addEventListener('click', function(e){
+        const trigger = e.target.closest('.section-index-gallery .gallery-open');
+        if(!trigger) return;
+        e.preventDefault();
+        const src = trigger.getAttribute('data-large') || trigger.querySelector('img')?.src;
+        const lb  = document.getElementById('galleryLightbox');
+        if(!lb || !src) return;
+        lb.querySelector('.lb__img').src = src;
+        lb.classList.add('open');
+      });
+    
+      (function(){
+        const lb = document.getElementById('galleryLightbox');
+        if(!lb) return;
+        lb.addEventListener('click', function(e){
+          if(e.target.classList.contains('lb') || e.target.classList.contains('lb__close')){
+            lb.classList.remove('open');
+            lb.querySelector('.lb__img').src='';
+          }
+        });
+        document.addEventListener('keydown', function(e){
+          if(e.key === 'Escape'){
+            lb.classList.remove('open');
+            lb.querySelector('.lb__img').src='';
+          }
+        });
+      })();
+    </script>
+    
 	</body>
 </html>
