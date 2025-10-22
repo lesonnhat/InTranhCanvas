@@ -672,3 +672,9 @@ $colorText: {{settings.shop_text_color}};
 		}
 	}
 }
+
+@media (max-width: 767px) {
+  .section-index-saleday .saleday-bg {
+    padding-bottom: 40px !important; /* thêm khoảng cách 40px ở đáy */
+  }
+}
