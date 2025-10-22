@@ -317,27 +317,35 @@
 	</div>
 </section>
 {%endif%}
+
 {%if settings.show_index_gallery%}
 <section class="section-index-gallery">
-	<div class="container">
-		{%if settings.index_gallery_title != ''%}
-		<div class="heading-title text-center">
-			<h2 class="title">{{settings.index_gallery_title}}</h2>
-		</div>
-		{%endif%}
-		<div class="row list-gallery">
-			{%for i in (1..5)%}
-			{%capture show%}show_index_gallery_{{i}}{%endcapture%}
-			{%capture img%}index_gallery_{{i}}_img.jpg{%endcapture%}
-			{%capture alt%}index_gallery_{{i}}_alt{%endcapture%}
-			{%capture link%}index_gallery_{{i}}_link{%endcapture%}
-			{%if settings[show]%}
-			<div class="gallery-item">
-				<a href="{{settings[link]}}"><img src="{{ img | asset_url}}" alt="{{settings[alt]}}" /></a>
-			</div>
-			{%endif%}
-			{%endfor%}
-		</div>
-	</div>
+  <div class="container">
+    {%if settings.index_gallery_title != ''%}
+    <div class="heading-title text-center">
+      <h2 class="title">{{settings.index_gallery_title}}</h2>
+    </div>
+    {%endif%}
+
+    <div class="row list-gallery">
+      {% for i in (1..6) %}
+        {% capture show %}show_index_gallery_{{ i }}{% endcapture %}
+        {% capture img %}index_gallery_{{ i }}_img.jpg{% endcapture %}
+        {% capture alt %}index_gallery_{{ i }}_alt{% endcapture %}
+        {% capture link %}index_gallery_{{ i }}_link{% endcapture %}
+
+        {% if settings[show] %}
+        {% assign large_src = settings[link] | default: (img | asset_url) %}
+        <div class="gallery-item">
+          <a href="#" class="gallery-open"
+             data-large="{{ large_src }}"
+             aria-label="{{ settings[alt] }}">
+            <img src="{{ img | asset_url }}" alt="{{ settings[alt] }}" />
+          </a>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
 </section>
 {%endif%}
