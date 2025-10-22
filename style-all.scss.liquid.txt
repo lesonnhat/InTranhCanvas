@@ -4722,7 +4722,7 @@ background-image: none;
 	.header-action-item.header-action_locale.js-action-show .overlays .header-action__link{z-index: 101;}
 }
 .header-search-mobile{
-	position: relative;display: none;padding: 0 10px 5px;background: #fff;
+	position: relative;display: none;padding: 0 10px 15px;background: #fff;
 	.searchform-mobile{
 		position: relative;
 		input.input-search{
