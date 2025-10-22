@@ -4368,7 +4368,7 @@ background-image: none;
 	}
 	@media(min-width:1200px) and (max-width: 1440px){
 		.header-left{gap: 25px;}
-		.header-wrap-menu .menuList-main > li{margin: 0 6px;}
+		.header-wrap-menu .menuList-main > li{margin: 0 9px;}
 	}
 
 	@media(min-width:992px){
@@ -6344,4 +6344,13 @@ background-image: none;
 /* Ẩn ảnh thứ 6 trên desktop (>= 992px) để vẫn là 5 ảnh) */
 @media (min-width: 992px){
   .section-index-gallery .gallery-item:nth-child(6){ display:none; }
+}
+
+.section-index-collection-tab .tab-title .title {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.section-index-collection-tab .tab-title .title:hover span {
+  color: var(--shop-color-hover, #0c6251); /* đổi sang màu chủ đạo khi hover */
 }
