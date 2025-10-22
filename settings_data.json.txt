@@ -3,7 +3,7 @@
 "current": {
 
 
-"use_logo": false,
+"use_logo": true,
 
 
 "customer_layout": "theme",
@@ -123,7 +123,7 @@
 "slide_2_button": "",
 
 
-"slide_3_show": false,
+"slide_3_show": true,
 
 
 "slide_3_tagline": "Sản phẩm khuyến mãi",
@@ -585,7 +585,7 @@
 "footer-email": "hi@lovemade.abc",
 
 
-"footer_logobct_show": true,
+"footer_logobct_show": false,
 
 
 "footer_linklist1_show": "1",
@@ -2361,7 +2361,7 @@
 "footer_linklist2_menu": "main-menu",
 
 
-"footer_linklist3_show": true,
+"footer_linklist3_show": false,
 
 
 "footer_linklist3_title": "Liên kết",
@@ -5409,7 +5409,7 @@
 "payment_footer_title": "Phương thức thanh toán",
 
 
-"payment_1_show": true,
+"payment_1_show": false,
 
 
 "payment_1_img.png": "",
@@ -5418,7 +5418,7 @@
 "payment_1_alt": "zalo pay",
 
 
-"payment_2_show": true,
+"payment_2_show": false,
 
 
 "payment_2_img.png": "",
@@ -5427,7 +5427,7 @@
 "payment_2_alt": "onepay",
 
 
-"payment_3_show": true,
+"payment_3_show": false,
 
 
 "payment_3_img.png": "",
@@ -5436,7 +5436,7 @@
 "payment_3_alt": "vn-pay",
 
 
-"payment_4_show": true,
+"payment_4_show": false,
 
 
 "payment_4_img.png": "",
@@ -6078,7 +6078,7 @@
 "show_header_search": true,
 
 
-"show_header_account": true,
+"show_header_account": false,
 
 
 "show_slide_bg": true,
@@ -6396,10 +6396,10 @@
 "index_service_6_link": "https://zen-care.myharavan.com/pages/tham-my-cho-nam-gioi",
 
 
-"ft_bg": "#ffffff",
+"ft_bg": "#797979",
 
 
-"ft_color": "#222222",
+"ft_color": "#ffffff",
 
 
 "copyright_bg": "#333333",
@@ -6423,7 +6423,7 @@
 "footer-tell3": "",
 
 
-"ft_copyright": "",
+"ft_copyright": "Copyright © 2025 IN TRANH CANVAS.",
 
 
 "show_index_wwd": true,
@@ -6675,7 +6675,7 @@
 "index_procedure_4_desc": "Trao đổi để hiểu rõ mục tiêu của bạn, giúp các chuyên gia của chúng tôi có thể tư vấn toàn diện dựa trên nhu cầu thẩm mỹ của bạn.",
 
 
-"show_index_review": true,
+"show_index_review": false,
 
 
 "show_index_review_bg": true,
@@ -6714,7 +6714,7 @@
 "index_review_banner_img.jpg": "",
 
 
-"show_index_review_1": true,
+"show_index_review_1": false,
 
 
 "index_review_1_img.jpg": "",
@@ -6729,7 +6729,7 @@
 "index_review_1_desc": "Sản phẩm chất lượng, chi tiết & chất lượng cao, giao hàng cũng nhanh, sẽ gợi ý cho bạn bè mua.",
 
 
-"show_index_review_2": true,
+"show_index_review_2": false,
 
 
 "index_review_2_img.jpg": "",
@@ -6744,7 +6744,7 @@
 "index_review_2_desc": "Sản phẩm chất lượng, chi tiết & chất lượng cao, giao hàng cũng nhanh, sẽ gợi ý cho bạn bè mua.",
 
 
-"show_index_review_3": true,
+"show_index_review_3": false,
 
 
 "index_review_3_img.jpg": "",
@@ -6759,7 +6759,7 @@
 "index_review_3_desc": "Sản phẩm chất lượng, chi tiết & chất lượng cao, giao hàng cũng nhanh, sẽ gợi ý cho bạn bè mua.",
 
 
-"show_index_review_4": true,
+"show_index_review_4": false,
 
 
 "index_review_4_img.jpg": "",
@@ -7080,7 +7080,7 @@
 "index_form_banner_img.jpg": "",
 
 
-"show_index_blog": true,
+"show_index_blog": false,
 
 
 "show_index_blog_title_icon": true,
@@ -8619,16 +8619,16 @@
 "index_category_1_img.jpg": "",
 
 
-"index_category_1_title": "TÚI <span>DỆT TAY</span>",
+"index_category_1_title": "TRANH <span>PASTEL</span>",
 
 
-"index_category_1_desc": "Giảm giá tới 50%",
+"index_category_1_desc": "Màu sắc nhẹ nhàng",
 
 
 "index_category_1_btn": "Xem ngay",
 
 
-"index_category_1_link": "",
+"index_category_1_link": "/collections/tranh-pastel",
 
 
 "show_index_category_2": true,
@@ -8637,16 +8637,16 @@
 "index_category_2_img.jpg": "",
 
 
-"index_category_2_title": "ĐÈN <span>HANDMADE</span>",
+"index_category_2_title": "<span>CHÂN DUNG</span>",
 
 
-"index_category_2_desc": "Giá tốt nhất",
+"index_category_2_desc": "Ghi dấu nét riêng",
 
 
 "index_category_2_btn": "Xem ngay",
 
 
-"index_category_2_link": "",
+"index_category_2_link": "/collections/chan-dung",
 
 
 "show_index_category_3": true,
@@ -8655,16 +8655,16 @@
 "index_category_3_img.jpg": "",
 
 
-"index_category_3_title": "SẢN PHẨM <span>SỨ</span>",
+"index_category_3_title": "TRANH <span>HOA LÁ</span>",
 
 
-"index_category_3_desc": "Nhiều mẫu mã hấp dẫn",
+"index_category_3_desc": "Vẻ đẹp tự nhiên",
 
 
 "index_category_3_btn": "Xem ngay",
 
 
-"index_category_3_link": "",
+"index_category_3_link": "/collections/hoa-la",
 
 
 "index_category_2_color_1": "#aa8453",
@@ -8697,7 +8697,7 @@
 "index_category_3_color_5": "#ffffff",
 
 
-"show_index_policy": true,
+"show_index_policy": false,
 
 
 "show_index_policy_1": true,
@@ -8766,7 +8766,7 @@
 "index_collection_banner_1_alt": "Banner 1",
 
 
-"index_collection_banner_1_link": "1",
+"index_collection_banner_1_link": "#",
 
 
 "show_index_collection_banner_2": true,
@@ -8778,7 +8778,7 @@
 "index_collection_banner_2_alt": "Banner 2",
 
 
-"index_collection_banner_2_link": "",
+"index_collection_banner_2_link": "#",
 
 
 "show_index_collection_banner_3": true,
@@ -8790,7 +8790,7 @@
 "index_collection_banner_3_alt": "Banner 3",
 
 
-"index_collection_banner_3_link": "",
+"index_collection_banner_3_link": "#",
 
 
 "index_collection_1_title": "Sản phẩm mới tại Lovemade",
@@ -8805,13 +8805,13 @@
 "index_banner_1_img.jpg": "",
 
 
-"index_banner_1_title": "ĐÈN HANDMADE",
+"index_banner_1_title": "TRANH<br>PHONG CẢNH",
 
 
-"index_banner_1_btn": "Xem thêm",
+"index_banner_1_btn": "Xem ngay",
 
 
-"index_banner_1_link": "",
+"index_banner_1_link": "/collections/phong-canh",
 
 
 "show_index_banner_2": true,
@@ -8820,13 +8820,13 @@
 "index_banner_2_img.jpg": "",
 
 
-"index_banner_2_title": "TÚI HANDMADE",
+"index_banner_2_title": "TRANH<br>ĐỘNG VẬT",
 
 
-"index_banner_2_btn": "Xem thêm",
+"index_banner_2_btn": "Xem ngay",
 
 
-"index_banner_2_link": "",
+"index_banner_2_link": "/collections/dong-vat",
 
 
 "show_index_collection_tab": true,
@@ -8835,7 +8835,7 @@
 "index_collection_tab_title": "Đồ nội thất, trang trí, gia dụng",
 
 
-"index_collection_tab_btn": "Xem thêm",
+"index_collection_tab_btn": "Xem thêm sản phẩm",
 
 
 "show_index_collection_tab_1": true,
@@ -8868,7 +8868,7 @@
 "show_index_collection_tab_4": true,
 
 
-"index_collection_tab_4_title": "Động vật",
+"index_collection_tab_4_title": "ĐỘNG VẬT",
 
 
 "index_collection_tab_4_handle": "dong-vat",
@@ -8886,7 +8886,7 @@
 "index_flashsale_time": "2026-05-25;23:00:00",
 
 
-"index_flashsale_handle": "hot-products",
+"index_flashsale_handle": "",
 
 
 "index_flashsale_limit": "10",
@@ -8901,19 +8901,19 @@
 "index_saleday_img.jpg": "",
 
 
-"index_saleday_title": "Khuyến mãi hấp dẫn",
+"index_saleday_title": "Về chúng tôi",
 
 
-"index_saleday_desc": "Khám phá các sản phẩm thủ công làm bằng tay chất lượng cao với giá hấp dẫn.\n\nMỗi sản phẩm địa phương có những câu chuyện riêng đầy hấp dẫn khiến sản phẩm thêm phần nổi bật.",
+"index_saleday_desc": "Mỗi bức tranh canvas được tạo nên không chỉ bằng mực in và chất liệu, mà còn bằng cảm xúc, sự tỉ mỉ và tinh tế trong từng chi tiết. Chúng tôi tin rằng, một bức tranh đẹp không chỉ để trang trí, mà còn để truyền cảm hứng, lưu giữ kỷ niệm và kể câu chuyện riêng của mỗi gia đình trong từng góc nhỏ thân quen.",
 
 
-"index_saleday_time": "2026-05-20;23:00:00",
+"index_saleday_time": "",
 
 
 "index_saleday_btn": "Xem thêm",
 
 
-"index_saleday_link": "https://lovemade.myharavan.com/collections/all",
+"index_saleday_link": "/pages/gioi-thieu",
 
 
 "show_index_gallery": true,
@@ -8994,7 +8994,7 @@
 "index_gallery_6_link": "",
 
 
-"footer_payment_show": true,
+"footer_payment_show": false,
 
 
 "img_gif.jpg": "",
