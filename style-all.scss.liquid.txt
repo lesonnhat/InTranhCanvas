@@ -6330,3 +6330,18 @@ background-image: none;
 }
 .product-loop:hover h3 a::after,
 .product-loop-slide:hover h3 a::after{ right:0; }
+
+/* Lightbox */
+.lb{ position:fixed; inset:0; display:none; align-items:center; justify-content:center;
+     background:rgba(0,0,0,.85); z-index:9999; padding:2vw; }
+.lb.open{ display:flex; }
+.lb__img{ max-width:100%; max-height:100%; object-fit:contain; border-radius:8px;
+          box-shadow:0 12px 40px rgba(0,0,0,.5); }
+.lb__close{ position:absolute; top:12px; right:14px; font-size:32px; color:#fff;
+            background:transparent; border:0; cursor:pointer; line-height:1; }
+.section-index-gallery .gallery-item{ cursor:pointer; }
+
+/* Ẩn ảnh thứ 6 trên desktop (>= 992px) để vẫn là 5 ảnh) */
+@media (min-width: 992px){
+  .section-index-gallery .gallery-item:nth-child(6){ display:none; }
+}
