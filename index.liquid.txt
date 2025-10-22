@@ -144,7 +144,15 @@
 					</div>
 					<div class="item-detail">
 						{%if settings[title] != ''%}<h2 class="title">{{settings[title]}}</h2>{%endif%}
-						{%if settings[btn] != ''%}<a href="{{settings[link]}}">{{settings[btn]}}</a>{%endif%}
+						
+            {% if settings[btn] != '' %}
+              <div class="btn-more">
+                <a href="{{ settings[link] }}" class="btn-banner">
+                  <span>{{ settings[btn] }}</span>
+                </a>
+              </div>
+            {% endif %}
+
 					</div>
 				</div>
 			</div>
