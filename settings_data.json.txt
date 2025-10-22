@@ -8607,7 +8607,7 @@
 "index_category_1_color_2": "#222222",
 
 
-"index_category_1_color_3": "#b8b8b8",
+"index_category_1_color_3": "#aaaaaa",
 
 
 "index_category_1_color_4": "#2c2c2c",
@@ -8673,7 +8673,7 @@
 "index_category_2_color_2": "#ffffff",
 
 
-"index_category_2_color_3": "#b8b8b8",
+"index_category_2_color_3": "#aaaaaa",
 
 
 "index_category_2_color_4": "#ffffff",
@@ -8688,7 +8688,7 @@
 "index_category_3_color_2": "#222222",
 
 
-"index_category_3_color_3": "#b8b8b8",
+"index_category_3_color_3": "#aaaaaa",
 
 
 "index_category_3_color_4": "#2c2c2c",
