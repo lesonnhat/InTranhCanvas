@@ -5044,7 +5044,7 @@ background-image: none;
 		}
 	}
 	@media(max-width: 767px){
-		margin: 20px 0 0;padding-top: 30px;
+		margin: 40px 0 0;padding-top: 30px;
 	}
 }
 /*========END Footer========*/
