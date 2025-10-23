@@ -17,6 +17,7 @@ $colorBreadcrumb: {{settings.header_banner_about_color}};
 }
 .section-breadcrumb{
 	padding: 60px 0;background: #f2f2f2; color: $colorBreadcrumb;
+  margin: 0px 0px 50px 0px;
 	.breadcrumb-content{
 		h1{text-transform: uppercase;font-weight: 600;font-size: 36px;}
 	}
