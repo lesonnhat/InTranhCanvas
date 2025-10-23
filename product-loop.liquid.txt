@@ -104,8 +104,7 @@
 			{% assign _img = product.featured_image | default: product.images.first %}
 
       <div class="product--image">
-        <div class="lazy-img first-image"
-             style="position:relative;width:100%;height:0;padding-bottom:100%;overflow:hidden;">
+        <div style="position:relative;width:100%;height:0;padding-bottom:100%;overflow:hidden;">
           <picture>
             <source media="(max-width: 480px)" data-srcset="{{ _img.src | product_img_url: 'large' }}">
             <source media="(min-width: 481px)" data-srcset="{{ _img.src | product_img_url: 'grande' }}">
