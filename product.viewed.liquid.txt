@@ -116,10 +116,6 @@
 				</div>				
 				{% endif %}
 			</div>
-			<div class="quickview-product">
-				<a class="icon-quickview {% if is_preorder_prodloop %}is-preorder{%endif%}" href="javascript:void(0)" data-handle="{{product.url}}"><i class="fa fa-eye" aria-hidden="true"></i></a>
-			</div>
-			<a href="{{product.url}}" class="proloop-link quickview-product" data-handle="{{product.url}}" title="{{product.title}}" ></a>
 		</div>
 		<div class="proloop-detail">
 			
