@@ -6260,49 +6260,6 @@ background-image: none;
 	border-top-color: var(--shop-color-main) !important;
 }
 
-/* ===== Hover & Cursor — Áp dụng TOÀN SITE cho card sản phẩm ===== */
-
-/* 1) Con trỏ bàn tay cho toàn bộ card (overlay link đã phủ toàn thẻ) */
-.product-loop .proloop-link,
-.product-loop-slide .proloop-link{
-  cursor: pointer;
-}
-
-/* 2) Màu tiêu đề khi hover card (ưu tiên cao, ghi đè rule cũ) */
-.section-index-collection-tab .product-loop:hover h3 a,
-.wraplist-collection .product-loop:hover h3 a,
-.listProduct-row .product-loop:hover h3 a{
-  color: var(--shop-color-hover) !important;
-}
-.section-index-collection-tab .product-loop h3 a,
-.wraplist-collection .product-loop h3 a,
-.listProduct-row .product-loop h3 a{
-  transition: color .25s ease;
-}
-
-/* 4) Option B: Nâng card + đổ bóng khi hover */
-.product-loop,
-.product-loop-slide{
-  transition: background-color .25s ease, box-shadow .25s ease, transform .25s ease;
-  background: #fff;   /* tuỳ chọn */
-}
-.product-loop:hover,
-.product-loop-slide:hover{
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(0,0,0,.08);
-}
-
-/* 6) Bonus: gạch chân mảnh tiêu đề khi hover */
-.product-loop h3 a,
-.product-loop-slide h3 a{ position: relative; text-decoration: none; }
-.product-loop h3 a::after,
-.product-loop-slide h3 a::after{
-  content:""; position:absolute; left:0; right:100%; bottom:-2px; height:1px;
-  background: currentColor; transition: right .25s ease;
-}
-.product-loop:hover h3 a::after,
-.product-loop-slide:hover h3 a::after{ right:0; }
-
 /* Lightbox */
 .lb{ position:fixed; inset:0; display:none; align-items:center; justify-content:center;
      background:rgba(0,0,0,.85); z-index:9999; padding:2vw; }
@@ -6325,66 +6282,4 @@ background-image: none;
 
 .section-index-collection-tab .tab-title .title:hover span {
   color: var(--shop-color-hover, #0c6251); /* đổi sang màu chủ đạo khi hover */
-}
-
-/* ===== RELATED – ẢNH VUÔNG, KHÔNG HỞ VIỀN ===== */
-.productDetail-related .product-loop .proloop-image{
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 1 / 1;              /* ép ô ảnh VUÔNG */
-  /* fallback nếu theme cũ chưa hỗ trợ aspect-ratio:
-     padding-top: 100%; height: 0; */
-}
-.productDetail-related .product-loop .proloop-image img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;                 /* ảnh phủ kín, không để khoảng trắng */
-  display: block;
-}
-/* Lớp link phủ khít 100%, tránh hở viền trái/phải */
-.productDetail-related .product-loop .proloop-image .proloop-link{
-  position: absolute;
-  inset: 0;                          /* tương đương top/right/bottom/left:0 */
-  width: 100%;
-  height: 100%;
-}
-
-/* ===== RELATED – HẾT “LẤP LÓ” Ở MÉP PHẢI, VẪN CÓ KHOẢNG CÁCH GIỮA ITEM ===== */
-/* Bỏ negative margin ở stage-outer và ẩn tràn */
-.productDetail-related .owlCarousel-style.owl-carousel .owl-stage-outer{
-  margin: 0 !important;
-  overflow: hidden;                  /* không cho item lòi ra mép */
-}
-/* Tạo khoảng cách bằng padding trên từng item */
-.productDetail-related .owlCarousel-style.owl-carousel .owl-item{
-  padding: 0 12px;                   /* desktop */
-  display: flex;                     /* giúp các card equal height */
-}
-@media (max-width: 991.98px){
-  .productDetail-related .owlCarousel-style.owl-carousel .owl-item{ padding: 0 10px; }
-}
-@media (max-width: 575.98px){
-  .productDetail-related .owlCarousel-style.owl-carousel .owl-item{ padding: 0 8px; }
-}
-/* Stage dùng flex để các item cao bằng nhau */
-.productDetail-related .owlCarousel-style.owl-carousel .owl-stage{
-  display: flex;
-}
-
-/* Card full-height, nền trắng đều */
-.productDetail-related .product-loop{
-  display: flex; flex-direction: column;
-  background: #fff; width: 100%; height: 100%;
-}
-
-/* Phần tên + giá giữ chiều cao tối thiểu để không hụt nền khi thiếu thông tin */
-.productDetail-related .product-loop .proloop-detail{
-  padding: 12px 8px 16px; background:#fff;
-  min-height: 96px;                  /* tăng/giảm nếu tên 2 dòng */
-}
-.productDetail-related .product-loop .proloop-detail .price,
-.productDetail-related .product-loop .proloop-detail .pro-prices{ min-height: 22px; }
-.productDetail-related .product-loop .proloop-detail .price:empty::after,
-.productDetail-related .product-loop .proloop-detail .pro-prices:empty::after{
-  content:""; display:block; height:22px;
 }

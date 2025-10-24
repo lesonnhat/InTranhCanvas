@@ -1,118 +1,198 @@
+/* =========================================================
+   CUSTOM OVERRIDES — SẢN PHẨM (Haravan)
+   - Collection Grid dùng CSS Grid + gutter rõ ràng
+   - Card equal-height, ảnh vuông ở Related/Recently
+   - Hover như Trang chủ: nhích -3px + đổ bóng nhẹ
+   - Đổi màu tiêu đề khi hover + gạch chân mảnh
+   - ẨN GIÁ + ẨN TẤT CẢ NÚT MUA/LIÊN HỆ
+   ========================================================= */
+
 /* =========================
-   COLLECTION GRID – CLEAN OVERRIDE (only on collection pages)
+   COLLECTION GRID (chỉ trang collection)
    ========================= */
 
-/* 1) Loại tác dụng negative margin & gutter của Bootstrap trong phạm vi collection */
+/* 1) Hạn chế gutter bootstrap mặc định trong phạm vi collection */
 .layout-collections .container { padding-left: 20px; padding-right: 20px; }
 .layout-collections .row { margin-left: 0 !important; margin-right: 0 !important; }
 .layout-collections .row > [class*="col-"] { padding-left: 0 !important; padding-right: 0 !important; }
 
-/* 2) Đổi hẳn list sản phẩm sang CSS Grid */
-/*   HTML: .wraplist-collection > .listProduct-row > (col-lg-3 col-md-6 col-6 product-loop) */
+/* 2) Chuyển list sang CSS Grid (4-3-2-2 cột theo breakpoint) */
 .layout-collections .wraplist-collection .listProduct-row{
   display: grid !important;
-  gap: 30px; /* khoảng cách item desktop */
-  grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 cột desktop */
+  gap: 30px;
+  grid-template-columns: repeat(4, minmax(0,1fr));
 }
-
-/* reset các col-* của bootstrap để không khóa width khi lên Grid */
 .layout-collections .wraplist-collection .listProduct-row > [class*="col-"]{
-  width: auto !important;
-  max-width: none !important;
-  flex: initial !important;
-  grid-column: auto !important;
-  grid-row: auto !important;
+  width: auto !important; max-width: none !important; flex: initial !important;
+  grid-column: auto !important; grid-row: auto !important;
 }
-
-/* Breakpoints gần giống ví dụ bạn đưa */
-@media (max-width: 1199.98px){
+@media (max-width:1199.98px){
   .layout-collections .wraplist-collection .listProduct-row{
-    gap: 24px 16px;
-    grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 cột */
+    gap: 24px 16px; grid-template-columns: repeat(3, minmax(0,1fr));
   }
 }
-@media (max-width: 991.98px){
+@media (max-width:991.98px){
   .layout-collections .wraplist-collection .listProduct-row{
-    gap: 20px 12px;
-    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 cột */
+    gap: 20px 12px; grid-template-columns: repeat(2, minmax(0,1fr));
   }
 }
-@media (max-width: 575.98px){
+@media (max-width:575.98px){
   .layout-collections .wraplist-collection .listProduct-row{
-    gap: 16px 10px;
-    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 cột mobile */
+    gap: 16px 10px; grid-template-columns: repeat(2, minmax(0,1fr));
   }
 }
 
-/* 3) Card sản phẩm – nền trắng, hover đổ bóng & nhích nhẹ như hình 2 */
+/* 3) Card trong collection: nền trắng; hover giống Trang chủ */
 .layout-collections .wraplist-collection .product-loop{
-  position: relative;
-  background: #fff;
+  position: relative; background:#fff;
   transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease;
   box-shadow: 0 0 0 rgba(0,0,0,0);
 }
-
-/* block ảnh giữ nguyên các style sẵn có của theme – chỉ đảm bảo full width */
-.layout-collections .wraplist-collection .product-loop .product-image img{
-  display: block; width: 100%; height: auto;
-}
-
-/* phần chi tiết dưới ảnh (tên + giá) nên có nền trắng & padding chuẩn */
-.layout-collections .wraplist-collection .product-loop .proloop-detail{
-  background: #fff;
-  padding: 14px 16px;
-}
-
-/* Hover giống layout cũ: nổi lên nhẹ, bóng mềm */
 .layout-collections .wraplist-collection .product-loop:hover{
+  transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0,0,0,.08); background-color:#fff;
+}
+/* Ảnh full width (không ép tỉ lệ trong collection) */
+.layout-collections .wraplist-collection .product-loop .product-image img{
+  display:block; width:100%; height:auto;
+}
+
+/* =========================
+   GLOBAL CARD BEHAVIOR (áp dụng mọi nơi dùng .product-loop)
+   ========================= */
+
+/* Con trỏ bàn tay cho overlay link + vùng ảnh */
+.product-loop .proloop-link,
+.product-loop-slide .proloop-link,
+.product-loop .proloop-image,
+.product-loop .proloop-image picture,
+.product-loop .proloop-image img{ cursor:pointer; }
+
+/* Hover đổi màu tiêu đề + gạch chân mảnh */
+.section-index-collection-tab .product-loop:hover h3 a,
+.wraplist-collection .product-loop:hover h3 a,
+.listProduct-row .product-loop:hover h3 a{ color: var(--shop-color-hover) !important; }
+.section-index-collection-tab .product-loop h3 a,
+.wraplist-collection .product-loop h3 a,
+.listProduct-row .product-loop h3 a{ transition: color .25s ease; }
+
+.product-loop h3 a,
+.product-loop-slide h3 a{ position:relative; text-decoration:none; }
+.product-loop h3 a::after,
+.product-loop-slide h3 a::after{
+  content:""; position:absolute; left:0; right:100%; bottom:-2px; height:1px;
+  background: currentColor; transition:right .25s ease;
+}
+.product-loop:hover h3 a::after,
+.product-loop-slide:hover h3 a::after{ right:0; }
+
+/* Hover nâng card + đổ bóng nhẹ (đồng bộ kiểu Trang chủ) */
+.product-loop,
+.product-loop-slide{
+  background:#fff;
+  transition: background-color .25s, box-shadow .25s, transform .25s;
+}
+.product-loop:hover,
+.product-loop-slide:hover{
   transform: translateY(-3px);
   box-shadow: 0 10px 24px rgba(0,0,0,.08);
-  background-color: #fff;
 }
 
-/* 4) Tránh xung đột: tắt các transform/shadow khác nếu có file cũ còn đè */
-.layout-collections .wraplist-collection .product-loop,
-.layout-collections .wraplist-collection .product-loop *{
-  /* chỉ bật nếu thấy hiệu ứng cũ còn dính; mặc định để comment: */
-  /* transition: none !important; */
+/* Tiêu đề 2 dòng để các card đều chiều cao */
+.product-loop .proloop-detail h3{
+  margin:8px 0 0; line-height:1.4;
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;
+  overflow:hidden; min-height:2.8em;
 }
 
-/* ====== LOAD MORE BUTTON – giữ kích thước, chỉ đổi màu ====== */
+/* Bố cục card full-height, phần thông tin co giãn */
+.product-loop{ height:100%; }
+.product-loop .product-inner{ display:flex; flex-direction:column; height:100%; }
+.product-loop .proloop-detail{ display:flex; flex-direction:column; flex:1 1 auto; padding:12px 8px 16px; }
+
+/* ẨN GIÁ + ẨN TOÀN BỘ ACTION (áp dụng toàn site) */
+.product-loop .proloop--price,
+.product-loop .price,
+.product-loop .price-del,
+.product-loop .pro-prices,
+.product-loop .prices-ctas,
+.product-loop .wrapper-action-loop,
+.product-loop .proloop-actions,
+.product-loop .btn-proloop,
+.product-loop .btn-proloop-contact{ display:none !important; }
+
+/* =========================
+   RELATED + RECENTLY VIEWED (carousel)
+   ========================= */
+
+/* Ảnh VUÔNG 1:1, crop đều */
+.productDetail-related .product-loop .proloop-image,
+.productDetail-recently-viewed .product-loop .proloop-image{
+  position:relative; overflow:hidden; aspect-ratio:1/1;
+}
+.productDetail-related .product-loop .proloop-image picture,
+.productDetail-related .product-loop .proloop-image img,
+.productDetail-recently-viewed .product-loop .proloop-image picture,
+.productDetail-recently-viewed .product-loop .proloop-image img{
+  width:100%; height:100%; object-fit:cover; display:block;
+}
+/* Fallback nếu không hỗ trợ aspect-ratio */
+@supports not (aspect-ratio:1/1){
+  .productDetail-related .product-loop .proloop-image,
+  .productDetail-recently-viewed .product-loop .proloop-image{ height:0; padding-bottom:100%; }
+  .productDetail-related .product-loop .proloop-image picture,
+  .productDetail-related .product-loop .proloop-image img,
+  .productDetail-recently-viewed .product-loop .proloop-image picture,
+  .productDetail-recently-viewed .product-loop .proloop-image img{ position:absolute; inset:0; }
+}
+/* Link phủ full khung ảnh (nếu có) */
+.productDetail-related .product-loop .proloop-image .proloop-link,
+.productDetail-recently-viewed .product-loop .proloop-image .proloop-link{
+  position:absolute; inset:0; width:100%; height:100%;
+}
+
+/* Gutter item + equal height cho Owl */
+.productDetail-related .owlCarousel-style.owl-carousel .owl-stage-outer,
+.productDetail-recently-viewed .owlCarousel-style.owl-carousel .owl-stage-outer{
+  margin:0 !important; overflow:hidden;
+}
+.productDetail-related .owlCarousel-style.owl-carousel .owl-stage,
+.productDetail-recently-viewed .owlCarousel-style.owl-carousel .owl-stage{
+  display:flex;
+}
+.productDetail-related .owlCarousel-style.owl-carousel .owl-item,
+.productDetail-recently-viewed .owlCarousel-style.owl-carousel .owl-item{
+  padding:0 12px !important; display:flex;
+}
+@media (max-width:991.98px){
+  .productDetail-related .owlCarousel-style.owl-carousel .owl-item,
+  .productDetail-recently-viewed .owlCarousel-style.owl-carousel .owl-item{ padding:0 10px !important; }
+}
+@media (max-width:575.98px){
+  .productDetail-related .owlCarousel-style.owl-carousel .owl-item,
+  .productDetail-recently-viewed .owlCarousel-style.owl-carousel .owl-item{ padding:0 8px !important; }
+}
+
+/* Card full-height, nền trắng đồng bộ */
+.productDetail-related .product-loop,
+.productDetail-recently-viewed .product-loop{
+  display:flex; flex-direction:column; width:100%; height:100%; background:#fff;
+}
+
+/* =========================
+   LOAD MORE (collection)
+   ========================= */
 .layout-collections .collection-loadmore .btn-loadmore{
   display:inline-flex; align-items:center; justify-content:center;
-  padding:10px 20px; border:0;
-  background: var(--shop-color-main); color:#fff;
-  position:relative; overflow:hidden;
-  transition: background-color .2s ease;
+  padding:10px 20px; border:0; background:var(--shop-color-main); color:#fff;
+  position:relative; overflow:hidden; transition:background-color .2s ease;
 }
 .layout-collections .collection-loadmore .btn-loadmore:hover{ background:#2c2c2c; }
-
-/* Loading: giấu chữ, spinner overlay ở giữa */
 .layout-collections .collection-loadmore .btn-loadmore.btn-loading{
-  color: transparent; pointer-events:none; background:#2c2c2c;
+  color:transparent; pointer-events:none; background:#2c2c2c;
 }
 .layout-collections .collection-loadmore .btn-loadmore.btn-loading::after{
-  content:""; position:absolute; inset:0; margin:auto;
-  width:18px; height:18px;
-  border:2px solid rgba(255,255,255,.45);
-  border-top-color:#fff; border-radius:50%;
+  content:""; position:absolute; inset:0; margin:auto; width:18px; height:18px;
+  border:2px solid rgba(255,255,255,.45); border-top-color:#fff; border-radius:50%;
   animation: btnspin .8s linear infinite;
 }
-@keyframes btnspin { to { transform: rotate(360deg); } }
-
-/* Trang chủ: đổi màu tiêu đề sản phẩm khi hover card – áp cho cả 2 khu */
-body.template-index .list-pro .product-loop .proloop-detail h3 a,
-body.template-index .list-product .product-loop .proloop-detail h3 a{
-  transition: color .25s ease;
-}
-
-/* Hover: ưu tiên cao hơn rule cố định màu */
-body.template-index .list-pro     .product-loop:hover .proloop-detail h3 a,
-body.template-index .list-product .product-loop:hover .proloop-detail h3 a{
-  color: var(--shop-color-hover) !important;
-  text-decoration: none;
-}
-
-.section-index-collection-tab .tab-detail{ position:relative; }
-.section-index-collection-tab .tab-detail .detail{ display:none; }   /* ẩn mặc định */
-.section-index-collection-tab .tab-detail .detail.show{ display:block; } /* panel active */
+@keyframes btnspin{ to { transform: rotate(360deg); } }
