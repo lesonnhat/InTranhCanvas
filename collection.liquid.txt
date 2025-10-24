@@ -78,75 +78,38 @@
   var activeSort = {{ settings.collection_sortby }};
 
   jQuery(function($){
-    // CLICK: Load more
     $(document).on("click", "#collection-body .collection-loadmore .btn-loadmore:not(.btn-loading)", function(e){
       e.preventDefault();
       var $btn = $(this).addClass('btn-loading');
       var link = parseInt($btn.attr("data-page")) || 2;
-      var view = "?view=data", pageView = "?view=pagesize";
+  
+      // Lấy tổng trang trực tiếp từ DOM (đã có sẵn)
+      var total_page = parseInt($('.wrapper-mainCollection').data('page')) || 1;
+  
       var collectionHd = "{{ collection.url }}";
-      var urlQuery = collectionHd + view;
+      var urlQuery = collectionHd + "?view=data";
       var pathName = window.location.pathname;
-
-      // Guard cho trang vendors/types (chỉ chạy nếu có paramUrl.q)
+  
       if ((pathName.indexOf('vendors') > -1 || pathName.indexOf('types') > -1) && window.paramUrl && paramUrl.q){
         collectionHd = pathName + '?q=' + paramUrl.q;
-        urlQuery = pathName + '?q=' + paramUrl.q + view.replace('?', '&');
+        urlQuery = pathName + '?q=' + paramUrl.q + "&view=data";
       }
-
-      // Tính sort nếu có UI .sort-by (không có thì để trống)
-      var sortBy = '';
-      if ($('.sort-by').length > 0 && $('.sort-by li.active').length > 0) {
-        var $active = $('.sort-by li.active').find('span');
-        if ($active.data('value') !== 'manual') {
-          // nếu bạn dùng filter=… thì cần sortby=..., còn nguyên bản collection dùng sort_by=...
-          sortBy = hasChangeSort || $('.checkbox-list li.active').length > 0
-                  ? '&sortby=' + ($active.data('filter') || '')
-                  : '&sort_by=' + ($active.data('value') || '');
-        }
-      }
-      sortByPicked = sortBy;
-
-      // Lấy tổng số trang (pagesize)
+  
       $.ajax({
-        url: collectionHd + (collectionHd.indexOf('?') > -1 ? pageView.replace('?', '&') : pageView),
+        url: urlQuery + '&page=' + link + (sortByPicked || ''),
         type: 'GET',
-        async: false,
-        success: function(data){
-          try {
-            data = JSON.parse(data);
-            total_page = parseInt(data.pages) || 1;
-          } catch(e) { total_page = 1; }
-        }
-      });
-
-      // Tải trang kế tiếp
-      $.ajax({
-        url: urlQuery + '&page=' + link + sortByPicked,
-        type: 'GET',
-        async: false,
         success: function(html){
-          setTimeout(function(){
-            $('.wraplist-collection .listProduct-filter').append(html).addClass('loaded');
-            $btn.removeClass('btn-loading');
-
-            if (window.productReviewsApp && window.productReviewsProloop) { ProductReviews.init(); }
-            if (window.promotionApp) {
-              if (window.promotionApp_name === 'app_combo' && window.comboApp) { comboApp.showGiftLabel(); }
-              else if (window.buyXgetY) { buyXgetY.showGiftLabel(); }
-            }
-            if ($(window).width() > 1200) {
-              $('[data-toggle="popover"]').popover({ container: 'body' });
-            }
-
-            if (link >= total_page) {
-              $('.wraplist-collection .listProduct-filter').siblings(':not(h3)').hide();
-            } else {
-              $btn.attr('data-page', link + 1);
-            }
-          }, 400);
+          $('.wraplist-collection .listProduct-filter').append(html);
+          $btn.removeClass('btn-loading');
+  
+          if (link >= total_page) {
+            $btn.closest('.collection-loadmore').remove(); // gọn gàng hơn
+          } else {
+            $btn.attr('data-page', link + 1);
+          }
         }
       });
     });
   });
+
 </script>
