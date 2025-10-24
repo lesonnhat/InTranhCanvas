@@ -1,0 +1,78 @@
+/* =========================
+   COLLECTION GRID – CLEAN OVERRIDE (only on collection pages)
+   ========================= */
+
+/* 1) Loại tác dụng negative margin & gutter của Bootstrap trong phạm vi collection */
+.layout-collections .container { padding-left: 20px; padding-right: 20px; }
+.layout-collections .row { margin-left: 0 !important; margin-right: 0 !important; }
+.layout-collections .row > [class*="col-"] { padding-left: 0 !important; padding-right: 0 !important; }
+
+/* 2) Đổi hẳn list sản phẩm sang CSS Grid */
+/*   HTML: .wraplist-collection > .listProduct-row > (col-lg-3 col-md-6 col-6 product-loop) */
+.layout-collections .wraplist-collection .listProduct-row{
+  display: grid !important;
+  gap: 30px; /* khoảng cách item desktop */
+  grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 cột desktop */
+}
+
+/* reset các col-* của bootstrap để không khóa width khi lên Grid */
+.layout-collections .wraplist-collection .listProduct-row > [class*="col-"]{
+  width: auto !important;
+  max-width: none !important;
+  flex: initial !important;
+  grid-column: auto !important;
+  grid-row: auto !important;
+}
+
+/* Breakpoints gần giống ví dụ bạn đưa */
+@media (max-width: 1199.98px){
+  .layout-collections .wraplist-collection .listProduct-row{
+    gap: 24px 16px;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 cột */
+  }
+}
+@media (max-width: 991.98px){
+  .layout-collections .wraplist-collection .listProduct-row{
+    gap: 20px 12px;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 cột */
+  }
+}
+@media (max-width: 575.98px){
+  .layout-collections .wraplist-collection .listProduct-row{
+    gap: 16px 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 cột mobile */
+  }
+}
+
+/* 3) Card sản phẩm – nền trắng, hover đổ bóng & nhích nhẹ như hình 2 */
+.layout-collections .wraplist-collection .product-loop{
+  position: relative;
+  background: #fff;
+  transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+/* block ảnh giữ nguyên các style sẵn có của theme – chỉ đảm bảo full width */
+.layout-collections .wraplist-collection .product-loop .product-image img{
+  display: block; width: 100%; height: auto;
+}
+
+/* phần chi tiết dưới ảnh (tên + giá) nên có nền trắng & padding chuẩn */
+.layout-collections .wraplist-collection .product-loop .proloop-detail{
+  background: #fff;
+  padding: 14px 16px;
+}
+
+/* Hover giống layout cũ: nổi lên nhẹ, bóng mềm */
+.layout-collections .wraplist-collection .product-loop:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  background-color: #fff;
+}
+
+/* 4) Tránh xung đột: tắt các transform/shadow khác nếu có file cũ còn đè */
+.layout-collections .wraplist-collection .product-loop,
+.layout-collections .wraplist-collection .product-loop *{
+  /* chỉ bật nếu thấy hiệu ứng cũ còn dính; mặc định để comment: */
+  /* transition: none !important; */
+}
