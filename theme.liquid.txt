@@ -116,6 +116,8 @@
     
       gtag('config', 'G-0VZ1R8XHDJ');
     </script>
+
+    {{ 'custom-overrides.css' | asset_url | stylesheet_tag }}
     
 	</head>
 	<body class="mainBody-theme {% if  cart.item_count > 0 %} mainBody-mbcart {% endif %} {% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" itemscope itemtype="http://schema.org/Website">
