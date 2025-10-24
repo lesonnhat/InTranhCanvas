@@ -93,11 +93,11 @@ ul, ol{	padding:0;margin:0;list-style-type:none;}
   z-index: 1;
   overflow: hidden;
   display: inline-block;
-  padding: 10px 22px;
+  padding: 10px 20px;
+  border-radius: 3px;
   line-height: normal;
   color: #fff; /* chữ trắng */
   background-color: var(--shop-color-main); /* nền xanh */
-  border: none;
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: .5px;
@@ -5186,23 +5186,7 @@ background-image: none;
 }
 
 .product-loop {
-	& {
-		position: relative;
-		padding-left: 7px;
-		padding-right: 7px;
-		margin-bottom: 14px;
-	}
-	.product-inner {
-		background: #fff;
-		height: 100%;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		-webkit-flex-direction: column;
-		-ms-flex-direction: column;
-		flex-direction: column;
-		justify-content: space-between;
-	}
+	& 
 	.proloop-image {
 		position: relative;
 		overflow: hidden;
@@ -6241,13 +6225,7 @@ background-image: none;
 		}
 	}
 }
-.listProduct-row {
-	margin-bottom: -14px;
-	margin-left: -7px;
-	margin-right: -7px;
-	display: flex;
-	display: -ms-flex;
-}
+
 @media(min-width: 992px) {
 	.collection-listproduct .product-loop.col-lg-2 {
 		-ms-flex: 0 0 20%;
@@ -6306,7 +6284,6 @@ background-image: none;
 .product-loop,
 .product-loop-slide{
   transition: background-color .25s ease, box-shadow .25s ease, transform .25s ease;
-  border-radius: 10px; /* tuỳ chọn */
   background: #fff;   /* tuỳ chọn */
 }
 .product-loop:hover,
@@ -6348,4 +6325,66 @@ background-image: none;
 
 .section-index-collection-tab .tab-title .title:hover span {
   color: var(--shop-color-hover, #0c6251); /* đổi sang màu chủ đạo khi hover */
+}
+
+/* ===== RELATED – ẢNH VUÔNG, KHÔNG HỞ VIỀN ===== */
+.productDetail-related .product-loop .proloop-image{
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;              /* ép ô ảnh VUÔNG */
+  /* fallback nếu theme cũ chưa hỗ trợ aspect-ratio:
+     padding-top: 100%; height: 0; */
+}
+.productDetail-related .product-loop .proloop-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;                 /* ảnh phủ kín, không để khoảng trắng */
+  display: block;
+}
+/* Lớp link phủ khít 100%, tránh hở viền trái/phải */
+.productDetail-related .product-loop .proloop-image .proloop-link{
+  position: absolute;
+  inset: 0;                          /* tương đương top/right/bottom/left:0 */
+  width: 100%;
+  height: 100%;
+}
+
+/* ===== RELATED – HẾT “LẤP LÓ” Ở MÉP PHẢI, VẪN CÓ KHOẢNG CÁCH GIỮA ITEM ===== */
+/* Bỏ negative margin ở stage-outer và ẩn tràn */
+.productDetail-related .owlCarousel-style.owl-carousel .owl-stage-outer{
+  margin: 0 !important;
+  overflow: hidden;                  /* không cho item lòi ra mép */
+}
+/* Tạo khoảng cách bằng padding trên từng item */
+.productDetail-related .owlCarousel-style.owl-carousel .owl-item{
+  padding: 0 12px;                   /* desktop */
+  display: flex;                     /* giúp các card equal height */
+}
+@media (max-width: 991.98px){
+  .productDetail-related .owlCarousel-style.owl-carousel .owl-item{ padding: 0 10px; }
+}
+@media (max-width: 575.98px){
+  .productDetail-related .owlCarousel-style.owl-carousel .owl-item{ padding: 0 8px; }
+}
+/* Stage dùng flex để các item cao bằng nhau */
+.productDetail-related .owlCarousel-style.owl-carousel .owl-stage{
+  display: flex;
+}
+
+/* Card full-height, nền trắng đều */
+.productDetail-related .product-loop{
+  display: flex; flex-direction: column;
+  background: #fff; width: 100%; height: 100%;
+}
+
+/* Phần tên + giá giữ chiều cao tối thiểu để không hụt nền khi thiếu thông tin */
+.productDetail-related .product-loop .proloop-detail{
+  padding: 12px 8px 16px; background:#fff;
+  min-height: 96px;                  /* tăng/giảm nếu tên 2 dòng */
+}
+.productDetail-related .product-loop .proloop-detail .price,
+.productDetail-related .product-loop .proloop-detail .pro-prices{ min-height: 22px; }
+.productDetail-related .product-loop .proloop-detail .price:empty::after,
+.productDetail-related .product-loop .proloop-detail .pro-prices:empty::after{
+  content:""; display:block; height:22px;
 }
