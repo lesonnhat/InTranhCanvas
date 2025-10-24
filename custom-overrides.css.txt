@@ -76,3 +76,43 @@
   /* chỉ bật nếu thấy hiệu ứng cũ còn dính; mặc định để comment: */
   /* transition: none !important; */
 }
+
+/* ====== LOAD MORE BUTTON – giữ kích thước, chỉ đổi màu ====== */
+.layout-collections .collection-loadmore .btn-loadmore{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:10px 20px; border:0;
+  background: var(--shop-color-main); color:#fff;
+  position:relative; overflow:hidden;
+  transition: background-color .2s ease;
+}
+.layout-collections .collection-loadmore .btn-loadmore:hover{ background:#2c2c2c; }
+
+/* Loading: giấu chữ, spinner overlay ở giữa */
+.layout-collections .collection-loadmore .btn-loadmore.btn-loading{
+  color: transparent; pointer-events:none; background:#2c2c2c;
+}
+.layout-collections .collection-loadmore .btn-loadmore.btn-loading::after{
+  content:""; position:absolute; inset:0; margin:auto;
+  width:18px; height:18px;
+  border:2px solid rgba(255,255,255,.45);
+  border-top-color:#fff; border-radius:50%;
+  animation: btnspin .8s linear infinite;
+}
+@keyframes btnspin { to { transform: rotate(360deg); } }
+
+/* Trang chủ: đổi màu tiêu đề sản phẩm khi hover card – áp cho cả 2 khu */
+body.template-index .list-pro .product-loop .proloop-detail h3 a,
+body.template-index .list-product .product-loop .proloop-detail h3 a{
+  transition: color .25s ease;
+}
+
+/* Hover: ưu tiên cao hơn rule cố định màu */
+body.template-index .list-pro     .product-loop:hover .proloop-detail h3 a,
+body.template-index .list-product .product-loop:hover .proloop-detail h3 a{
+  color: var(--shop-color-hover) !important;
+  text-decoration: none;
+}
+
+.section-index-collection-tab .tab-detail{ position:relative; }
+.section-index-collection-tab .tab-detail .detail{ display:none; }   /* ẩn mặc định */
+.section-index-collection-tab .tab-detail .detail.show{ display:block; } /* panel active */

@@ -2088,29 +2088,73 @@ HRT.Index = {
 			$('.section-index-collection-1').find('.owl-prev').attr('aria-label', 'prev slide');
 		}
 	},
-	collectionTab: function(){
-		var first_id = $('.section-index-collection-tab .list-title li:first').attr('data-id'),
-				first_handle = $('.section-index-collection-tab .list-title li:first').attr('data-handle');
-		function render_pro(id,handle){
-			var url = "/collections/"+ handle + "?view=index-tab";
-			$.ajax(url, { type: 'POST', success: function (data) { $("#" + id).html(data); } } );
-		}
-		$('.section-index-collection-tab .list-title li:first').addClass('active');
-		if(first_handle != ''){
-			$('.tab-detail #' + first_id).addClass('show');
-			render_pro(first_id,first_handle);
-		}
-		$('.section-index-collection-tab .list-title li').click(function(){
-		var data_id = $(this).attr('data-id'), data_handle = $(this).attr('data-handle'), length = $('.tab-detail .detail#'+data_id+' .product-loop').length;
-			if(data_handle != '' && length < 1){
-				render_pro(data_id,data_handle);
-			}
-			$('.section-index-collection-tab .list-title li').removeClass('active');
-			$(this).addClass('active');
-			$('.tab-detail .detail').removeClass('show');
-			$('.tab-detail #' + data_id).addClass('show');
-		})
-	},
+	collectionTab: function () {
+  var $wrap     = $('.section-index-collection-tab');
+  if (!$wrap.length) return;
+
+  var $titles   = $wrap.find('.list-title li');
+  var $box      = $wrap.find('.tab-detail');
+
+  function renderPane($pane, handle) {
+    // đã load rồi thì bỏ qua
+    if ($pane.data('loaded')) return $.Deferred().resolve().promise();
+
+    var url = "/collections/" + handle + "?view=index-tab";
+    return $.ajax({
+      url: url, type: 'POST'
+    }).done(function (html) {
+      $pane.html(html).data('loaded', true);
+    });
+  }
+
+  // Khởi tạo: bật panel đầu tiên + load nội dung
+    var $first    = $titles.first().addClass('active');
+    var firstId   = $first.attr('data-id');
+    var firstHd   = $first.attr('data-handle');
+    var $firstPane= $box.find('#' + firstId).addClass('show');
+  
+    if (firstHd) { renderPane($firstPane, firstHd); }
+  
+    // Click đổi tab – crossfade, không nhấp nháy trắng
+    $titles.on('click', function (e) {
+      e.preventDefault();
+  
+      var $btn   = $(this);
+      if ($btn.hasClass('active')) return;
+  
+      var id     = $btn.attr('data-id');
+      var handle = $btn.attr('data-handle');
+      var $cur   = $box.find('.detail.show');
+      var $next  = $box.find('#' + id);
+  
+      // Active trạng thái nút
+      $titles.removeClass('active');
+      $btn.addClass('active');
+  
+      // Khoá chiều cao container để tránh giật layout
+      var h = $box.height();
+      $box.height(h);
+  
+      // Đảm bảo panel mới có nội dung trước khi fade (nếu chưa tải)
+      $.when(renderPane($next, handle)).always(function () {
+        // Cross-fade: bật cái mới trước, tắt cái cũ sau ⇒ không có frame trống
+        $next.stop(true, true)
+          .css({ opacity: 0, display: 'block', position: 'relative' })
+          .addClass('show')
+          .animate({ opacity: 1 }, 200, function () {
+            $next.css({ opacity: '', display: '', position: '' });
+          });
+  
+        $cur.stop(true, true)
+          .css({ position: 'absolute', left: 0, right: 0 })
+          .animate({ opacity: 0 }, 160, function () {
+            $cur.removeClass('show').removeAttr('style').hide();
+            $box.css('height', ''); // mở khoá chiều cao
+          });
+      });
+    });
+  },
+
 	sliderReview: function(){
 		$('.section-index-review .owl-carousel').owlCarousel({
 			items:3,
