@@ -3417,7 +3417,7 @@ li.has-submenu.level2 > ul.submenu-links li a{padding-left:35px;}
 }
 .productDetail--box [class^="product-"] {padding: 15px;background: #fff;}
 .productDetail--navs {
-	background: #fff;padding: 15px 0 0;margin-bottom: 50px;
+	background: #fff;padding: 15px 0 0;
 	flex: 0 0 100%;-ms-flex: 0 0 100%;
 	.tab-title {
 		&{border-bottom: 1px solid #ededed;justify-content: center;gap: 15px 20px;}
