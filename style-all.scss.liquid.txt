@@ -4180,7 +4180,7 @@ background-image: none;
 						background: rgba($colorText, 0.1);
 					}
 				}
-				a {padding: 10px 22px;text-align: left;display: block;font-size: 15px;font-weight: 500;color:var(--shop-color-text);}
+				a {padding: 10px 22px;text-align: left;display: block;font-size: 17px;font-weight: 500;color:var(--shop-color-text);}
 				a svg {
 					width: 15px;
 					position: absolute;right: 15px;top: 50%;
