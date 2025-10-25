@@ -607,6 +607,3 @@
 <div class="modal-coupon--backdrop"></div>
 
 <!-- JS PRODUCT -->{% include 'template-product-script'%}
-
-
-
