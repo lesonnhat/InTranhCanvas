@@ -165,12 +165,8 @@
 			$('.product-gallery__item[data-fancybox="gallery"]').fancybox({
         protect: true,
         hash : false,
-        buttons : [
-          "slideShow",
-          'zoom',
-          "thumbs",
-          'close'
-        ],
+        buttons : ['close'],   // chỉ giữ nút đóng
+        arrows: false,         // tắt mũi tên trái/phải
         animationEffect: "zoom",
         infobar : false,
       });
