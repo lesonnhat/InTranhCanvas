@@ -54,7 +54,6 @@ body{
 article, aside, details, figcaption, figure, dialog, footer, header, hgroup, menu, nav, section { display:block; }
 /* 1.3 - Typography */
 h1,h2,h3,h4,h5,h6 { margin:0 0 13px 0; line-height:1.2}
-img{max-width:100%;}
 /* 1.4 - Links and Buttons */
 a {color:var(--shop-color-text);text-decoration: none; outline: none; -moz-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out;-webkit-transition: all 0.3s ease-in-out;transition: all 0.3s ease-in-out;}
 a:hover,a:focus{color: var(--shop-color-hover);text-decoration: none; outline: none;}	
@@ -5160,7 +5159,7 @@ background-image: none;
     img{
       /* ảnh phủ kín khung vuông */
       position: absolute; inset: 0;
-      width: 100%; height: 100%;
+      width: 100%;
       object-fit: cover;      // dùng contain nếu không muốn crop
       transform: none;        // bỏ translate -50% -50%
       max-height: none;
@@ -6320,7 +6319,7 @@ background-image: none;
   position:absolute; inset:0;
 }
 .productDetail--gallery .productCarousel-thumb .product-thumb .boxlazy-img__aspect > img{
-  position:absolute; inset:0; width:100%; height:100%; object-fit: cover; transform:none;
+  position:absolute; inset:0; width:100%; object-fit: cover; transform:none;
 }
 
 /* 3) Tránh thumbnail bị “lọt lòng” vì padding */
