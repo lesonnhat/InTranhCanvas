@@ -124,7 +124,7 @@ position: -webkit-sticky;position: sticky;
 	.sidebox-title{
 		padding: 15px 20px;
 		h3 {
-			font-size: 16px;
+			font-size: 18px;
 			margin-bottom: 0;
 			position: relative;
 			cursor: pointer;
