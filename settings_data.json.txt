@@ -606,7 +606,7 @@
 "blog_pagination_limit": "4",
 
 
-"shop_text_color": "#222222",
+"shop_text_color": "#282828",
 
 
 "shop_title_color": "#333333",
@@ -906,10 +906,10 @@
 "page_banner_image": "https://file.hstatic.net/1000397797/file/banner_sidebar-min_742b4a3cd73848b199de80ebc3cbdb33.jpg",
 
 
-"page_banner_alt": "the swan",
+"page_banner_alt": "photo",
 
 
-"page_banner_link": "/",
+"page_banner_link": "#",
 
 
 "addthis_iconList_show": true,
@@ -1143,7 +1143,7 @@
 "product_coutdown_title": "Ưu đãi này sẽ kết thúc sau:",
 
 
-"popup_contact_show": true,
+"popup_contact_show": false,
 
 
 "popup_contact_select": "popupPromotion",
@@ -3144,7 +3144,7 @@
 "frame_1": "https://file.hstatic.net/200000472671/file/frame2_8b7768d0e0644ec29d632152c004c0be.png",
 
 
-"use_frame_2": true,
+"use_frame_2": false,
 
 
 "tag_frame_2": "promotion_2",
@@ -4860,7 +4860,7 @@
 "coupon_title": "Khuyến mãi dành cho bạn",
 
 
-"header_live_show": true,
+"header_live_show": false,
 
 
 "header_livetxt_show": "Live stream",
@@ -5775,7 +5775,7 @@
 "prod_variant_show": false,
 
 
-"toolbar_bottom_selected": "toolbar_style_2",
+"toolbar_bottom_selected": "toolbar_style_3",
 
 
 "toolbar_icon_zalo_bg": "#1272e8",
@@ -6006,7 +6006,7 @@
 "use_cart_freeship_min": true,
 
 
-"shop_buying": true,
+"shop_buying": false,
 
 
 "footer-address-2": "",
@@ -9006,13 +9006,13 @@
 "about_us_ceo_img.jpg": "",
 
 
-"about_us_ceo_name": "Trương Trần",
+"about_us_ceo_name": "Bùi Thu Hà",
 
 
-"about_us_ceo_position": "Founder Lovemade",
+"about_us_ceo_position": "Founder Thành Đạt",
 
 
-"about_us_ceo_desc": "Lovemade hiểu rằng tâm lý của đại đa số người Việt vẫn còn e ngại hàng nội địa do chất lượng sản phẩm chưa thực sự được đảm bảo. Vì vậy, chúng mình luôn đặt chất lượng lên hàng đầu trong mọi hoạt động, từ việc lựa chọn thương hiệu Việt để hợp tác, đến cách phục vụ khách hàng và phát triển thị trường.",
+"about_us_ceo_desc": "Tôi tin rằng mỗi bức tranh đều mang một câu chuyện và cảm xúc riêng. Thành Đạt được ra đời với mong muốn biến công nghệ in thành một hình thức nghệ thuật – nơi màu sắc, đường nét và cảm xúc hòa quyện, tạo nên những tác phẩm canvas bền đẹp và có hồn.",
 
 
 "show_about_us_page_content": true,
@@ -9024,10 +9024,10 @@
 "about_us_about_1_img.jpg": "",
 
 
-"about_us_about_1_title": "Tại sao nên mua hàng tại Lovemade",
+"about_us_about_1_title": "Tại sao nên in tranh tại Thành Đạt",
 
 
-"about_us_about_1_desc": "Lovemade hiểu rằng tâm lý của đại đa số người Việt vẫn còn e ngại hàng nội địa do chất lượng sản phẩm chưa thực sự được đảm bảo. Vì vậy, chúng mình luôn đặt chất lượng lên hàng đầu trong mọi hoạt động, từ việc lựa chọn thương hiệu Việt để hợp tác, đến cách phục vụ khách hàng và phát triển thị trường.",
+"about_us_about_1_desc": "Thành Đạt mang đến dịch vụ in tranh canvas chuyên nghiệp với công nghệ hiện đại, mực in chính hãng và chất liệu vải cao cấp. Chúng tôi chú trọng từ khâu thiết kế, chỉnh màu đến hoàn thiện khung, đảm bảo mỗi bức tranh đều đạt độ sắc nét, thẩm mỹ và phù hợp với không gian sống của khách hàng.",
 
 
 "show_about_us_about_2": true,
@@ -9036,10 +9036,10 @@
 "about_us_about_2_img.jpg": "",
 
 
-"about_us_about_2_title": "Lovemade luôn đảm bảo chất lượng sản phẩm",
+"about_us_about_2_title": "Luôn đảm bảo chất lượng sản phẩm",
 
 
-"about_us_about_2_desc": "Lovemade hiểu rằng tâm lý của đại đa số người Việt vẫn còn e ngại hàng nội địa do chất lượng sản phẩm chưa thực sự được đảm bảo. Vì vậy, chúng mình luôn đặt chất lượng lên hàng đầu trong mọi hoạt động, từ việc lựa chọn thương hiệu Việt để hợp tác, đến cách phục vụ khách hàng và phát triển thị trường.",
+"about_us_about_2_desc": "Mỗi sản phẩm được kiểm tra tỉ mỉ ở từng công đoạn, từ in ấn đến đóng gói. Vải canvas bền màu, khung gỗ chắc chắn và mực in an toàn giúp tranh giữ màu lâu, hình ảnh rõ nét và bền đẹp theo thời gian – đó là cam kết chất lượng mà Thành Đạt luôn duy trì.",
 
 
 "contact_form_desc": "Bạn có thắc mắc về sản phẩm của chúng tôi, hoặc cần thêm thông tin, hãy để lại lời nhắn, chúng tôi sẽ liên hệ lại ngay.",
