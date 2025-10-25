@@ -2680,7 +2680,7 @@ SIDEBAR MAIN
 .menuList-links li a:hover,.menuList-links li a:focus{color:var(--shop-color-hover);}
 .menuList-links > li{border-bottom: 1px dashed var(--shop-color-border);}
 .menuList-links > li:last-child{border-bottom: none;}
-.menuList-links > li > a {padding:12px 0;font-weight: 500;font-size: 15px;}
+.menuList-links > li > a {padding:12px 0;font-weight: 500;font-size: 17px;}
 .menuList-links > li.has-submenu >a{padding-right:30px}
 .menuList-links > li.has-submenu span.icon-plus-submenu {	width: 25px;height:25px;cursor: pointer;position: absolute;right: 0;top: 0;bottom: 0;margin: auto;border: 1px solid transparent;}
 .icon-plus-submenu:after,.icon-plus-submenu:before {
