@@ -163,17 +163,17 @@
 		},
 		fancyboxProduct:function(){
 			$('.product-gallery__item[data-fancybox="gallery"]').fancybox({
-				protect: true,
-				hash : false,
-				buttons : [
-					"slideShow",
-					'zoom',
-					"thumbs",
-					'close'
-				],
-				animationEffect: "zoom",
-				infobar : false,
-			});
+        protect: true,
+        hash : false,
+        buttons : [
+          "slideShow",
+          'zoom',
+          "thumbs",
+          'close'
+        ],
+        animationEffect: "zoom",
+        infobar : false,
+      });
 		}
 	};
 	$(document).ready(function(){
