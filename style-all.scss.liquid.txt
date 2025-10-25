@@ -6282,30 +6282,24 @@ background-image: none;
   height: auto !important;
 }
 
-/* 1) Ép SLIDE ẢNH LỚN thành vuông ngay trên wrapper .product-gallery */
+/* === 1) SLIDE ẢNH LỚN: khung vuông === */
 .productDetail--gallery .productCarousel-slider .product-gallery{
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;          /* khung vuông thực sự */
-  overflow: hidden;              /* tránh ảnh tràn */
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
 }
-
-/* Bên trong: bỏ padding-trick cũ, cho phần tử con bám full khung */
-.productDetail--gallery .productCarousel-slider .product-gallery .boxlazy-img__insert{
-  position: absolute; inset: 0;
-  height: 100%; width: 100%;
-  padding-top: 0 !important;     /* vô hiệu height:0 + padding-top cũ */
-}
-
+.productDetail--gallery .productCarousel-slider .product-gallery .boxlazy-img__insert,
 .productDetail--gallery .productCarousel-slider .product-gallery .boxlazy-img__aspect{
-  position: absolute; inset: 0; display: block;
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  padding-top: 0 !important;
 }
-
 .productDetail--gallery .productCarousel-slider .product-gallery .boxlazy-img__aspect > img{
   position: absolute; inset: 0;
   width: 100%; height: 100%;
-  object-fit: cover;              /* đổi 'contain' nếu không muốn crop */
-  transform: none; max-height: none;
+  display: block;
+  object-fit: cover; /* dùng contain nếu không muốn crop */
 }
 
 /* 2) THUMBNAILS: cho khung vuông đồng nhất */
@@ -6322,39 +6316,18 @@ background-image: none;
   position:absolute; inset:0; width:100%; object-fit: cover; transform:none;
 }
 
-/* 3) Tránh thumbnail bị “lọt lòng” vì padding */
-.productCarousel-thumb .product-thumb__item{ padding: 0; }
+/* === 3) Chỉ nới cao tự động cho wrapper chiều cao của Owl === */
+.productDetail--gallery .productCarousel-slider .owl-height{ height:auto !important; }
 
-/* 4) Nếu trước đó có rule: .lazy-img__100 .boxlazy-img__aspect { padding:15px } */
-.productDetail--gallery .lazy-img__100 .boxlazy-img__aspect{ padding: 0 !important; }
-
-/* Vỏ bọc nút điều hướng */
+/* === 4) (Tuỳ chọn) Style nút điều hướng === */
 .productDetail--gallery .productCarousel-slider .owl-nav button{
-  width: 48px;
-  height: 48px;
-  line-height: 48px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.85) !important;
-  border: 1px solid rgba(0,0,0,0.08);
-  color: #333 !important;
-  z-index: 5;
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:48px; height:48px; line-height:48px;
+  border-radius:999px; background:rgba(255,255,255,0.85) !important;
+  border:1px solid rgba(0,0,0,0.08); color:#333 !important; z-index:5;
 }
-
-/* vị trí 2 bên, giữa chiều cao */
-.productDetail--gallery .productCarousel-slider .owl-nav .owl-prev{ left: 8px; }
-.productDetail--gallery .productCarousel-slider .owl-nav .owl-next{ right: 8px; }
-.productDetail--gallery .productCarousel-slider .owl-nav button{
-  position: absolute; top: 50%; transform: translateY(-50%);
-}
-
-/* hiệu ứng hover/focus */
+.productDetail--gallery .productCarousel-slider .owl-nav .owl-prev{ left:8px; }
+.productDetail--gallery .productCarousel-slider .owl-nav .owl-next{ right:8px; }
 .productDetail--gallery .productCarousel-slider .owl-nav button:hover{
-  background: rgba(255,255,255,1) !important;
-}
-
-/* icon FontAwesome sẫm màu hơn */
-.productDetail--gallery .productCarousel-slider .owl-nav .owl-prev:before,
-.productDetail--gallery .productCarousel-slider .owl-nav .owl-next:before{
-  color: #333;
-  font-size: 20px;   /* nằm gọn trong nút tròn */
+  background:#fff !important;
 }
