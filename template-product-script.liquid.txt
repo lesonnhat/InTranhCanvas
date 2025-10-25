@@ -111,36 +111,14 @@
 			}
 		},
 		expandableDescProduct: function(){
-			var expandable_content_height = $('.expandable-toggle .description-productdetail').height();
-			if(expandable_content_height > 220){
-				$('.expandable-toggle .description-productdetail').css({
-					"height": "220px",
-					"overflow": "hidden"
-				});
-			}
-			else{
-				$('.expandable-content_toggle').addClass('d-none');
-			}
-			$('body').on('click', '.js_expandable_content', function (e) {
-				if (!$('.expandable-toggle').hasClass('opened')) {		
-					$('.expandable-content_toggle').removeClass('btn-closemore').addClass('btn-viewmore').find('.expandable-content_toggle-text').html('Xem thêm nội dung');
-					var curHeight = $('.expandable-toggle .description-productdetail').height();
-					expandable_content_height = 220;
-					$('.expandable-toggle .description-productdetail').height(curHeight).animate({
-						height: expandable_content_height
-					}, 300,  function () {
-						$(this).parent().addClass('opened');
-					});
-					var x = $('.product-description').offset().top;
-					HRT.All.smoothScroll(x - 90, 250); 
-				} 
-				else {
-					$('.expandable-toggle .description-productdetail').css('height', 'auto');
-					$('.expandable-toggle').removeClass('opened');
-					$('.expandable-content_toggle').removeClass('btn-viewmore').addClass('btn-closemore').find('.expandable-content_toggle-text').html('Rút gọn nội dung');
-				}
-			}); 
-		},
+      // Luôn hiển thị full mô tả và bỏ nút toggle
+      $('.expandable-toggle .description-productdetail')
+        .attr('style','')                           // gỡ inline style cũ
+        .css({height:'auto', overflow:'visible'});  // mở full
+    
+      $('.expandable-content_toggle').closest('.description-btn').remove(); // ẩn nút
+      $('.expandable-toggle').removeClass('opened');
+    },
 		showModalSizeProduct: function(){
 			$('.btn-size-guide').on('click', function(e){
 				e.preventDefault();	

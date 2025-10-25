@@ -536,12 +536,6 @@
 										{{ product.description }}
 										{%-endif-%}
 									</div>
-									<div class="description-btn">
-										<button class="expandable-content_toggle js_expandable_content">
-											<span class="expandable-content_toggle-icon"></span>
-											<span class="expandable-content_toggle-text">Xem thêm nội dung</span>
-										</button>
-									</div>
 									{%- else -%}
 									<p>Chưa có mô tả cho sản phẩm này</p>
 									{%- endif -%}
