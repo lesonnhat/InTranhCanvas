@@ -159,12 +159,25 @@
 										{%-endif-%}
 
 										{%- for thumb in product.images -%}
-										<div class="product-gallery boxlazy-img"  data-image="{{ thumb.src | product_img_url : 'master' }}">
+										<div class="product-gallery boxlazy-img" style="aspect-ratio:1/1;" data-image="{{ thumb.src | product_img_url : 'master' }}">
 											<div class="boxlazy-img__insert lazy-img__prod">
 												<span class="boxlazy-img__aspect">
-													<a class="product-gallery__item" data-fancybox="gallery" href="{{ thumb.src | product_img_url : 'master' }}">	
-														<img src="{{ thumb.src | product_img_url : 'master' }}" alt="{% if product.images.alt.size >0 %}{{ product.images.alt  | strip_html | escape }} {% else%} {{product.title | strip_html | escape }} {% endif %}">
-													</a>	
+													
+                          {%- assign main_src_512  = thumb.src | product_img_url: '512x512' -%}
+                          {%- assign main_src_1024 = thumb.src | product_img_url: '1024x1024' -%}
+                          {%- assign main_src_1536 = thumb.src | product_img_url: '1536x1536' -%}
+                          {%- assign main_src_2048 = thumb.src | product_img_url: '2048x2048' -%}
+                          <a class="product-gallery__item" data-fancybox="gallery" href="{{ thumb.src | product_img_url : 'master' }}">
+                            <img
+                              src="{{ main_src_1024 }}"
+                              srcset="{{ main_src_512 }} 512w, {{ main_src_1024 }} 1024w, {{ main_src_1536 }} 1536w, {{ main_src_2048 }} 2048w"
+                              sizes="(max-width: 992px) 100vw, 512px"
+                              alt="{% if product.images.alt.size >0 %}{{ product.images.alt | strip_html | escape }}{% else %}{{ product.title | strip_html | escape }}{% endif %}"
+                              fetchpriority="high"
+                              decoding="async"
+                            >
+                          </a>
+                          
 												</span>
 											</div>
 										</div>	
@@ -173,7 +186,7 @@
 											<div class="product-thumb__item boxlazy-img" >	
 												<div class="boxlazy-img__insert lazy-img__prod">
 													<span class="boxlazy-img__aspect">
-														<img src="{{ thumb.src | product_img_url : 'compact' }}" alt="{% if product.images.alt.size >0 %}{{ product.images.alt  | strip_html | escape }} {% else%} {{product.title | strip_html | escape }} {% endif %}">
+														<img src="{{ thumb.src | product_img_url : 'compact' }}" loading="lazy" decoding="async" alt="{% if product.images.alt.size >0 %}{{ product.images.alt  | strip_html | escape }} {% else%} {{product.title | strip_html | escape }} {% endif %}">
 													</span>
 												</div>
 											</div>					
