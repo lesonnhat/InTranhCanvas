@@ -3389,7 +3389,7 @@ li.has-submenu.level2 > ul.submenu-links li a{padding-left:35px;}
 	}
 	@media(max-width:1199px){
 		.wrapbox-detail {display:flex;display:-ms-flex;flex-direction: column;-ms-flex-direction: column;}
-		.product-heading h1{font-size: 20px;}
+		.product-heading h1{font-size: 24px;}
 	}
 	@media(min-width:992px){
 		.product-boxright {padding-left: 0;}
@@ -6358,4 +6358,11 @@ background-image: none;
   font-size: 18px;
   line-height: 1.6;
   color: #111827;
+}
+
+/* Tăng khoảng cách phía trên tiêu đề ở mobile */
+@media (max-width: 991px){
+  .productDetail--content .product-heading{
+    margin-top: 20px;   /* chỉnh 12–24px theo ý */
+  }
 }
