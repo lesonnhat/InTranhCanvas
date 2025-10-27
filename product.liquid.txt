@@ -410,28 +410,26 @@
 								{%-endif-%}
 							</div>
 							{%- if settings.product_deliverly_show -%}
-							<div class="product-deliverly">	
-								<div class="deliverly-inner">
-									<div class="row m-0 infoList-deliverly">
-										{% for i in (1..6) %}
-										{% capture show_deliverly %}product_deliverly_{{ i }}_show{% endcapture %}
-										{% capture text_deliverly %}product_deliverly_{{ i }}_text{% endcapture %}
-										{% capture icon_deliverly %}product_deliverly_{{ i }}_ico.png{% endcapture %}
-										{% if settings[show_deliverly] %}
-										<div class="col-lg-6 col-12 deliverly-item">
-											<span>
-												<img class="lazyload" data-src="{{ icon_deliverly | asset_url}}" 
-														 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-														 alt="{{ settings[text_deliverly] | strip_html | escape}}"/>
-											</span>
-											{{ settings[text_deliverly] }}
-										</div>
-										{% endif %}
-										{% endfor %}
-									</div>
-								</div>
-							</div>
-							{%- endif -%}
+              <div class="product-deliverly">	
+                <div class="deliverly-inner">
+                  <div class="infoList-deliverly-single">
+                    <div class="deliverly-item-single">
+                      <!-- Icon: dùng inline SVG để sắc nét, không phụ thuộc asset -->
+                      <span class="deliverly-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6l7-3z" stroke="#3B82F6" stroke-width="1.5" fill="#DBEAFE"/>
+                          <path d="M8.5 12.5l2.5 2.5 4.5-5" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                      <div class="deliverly-text">
+                        Hỗ trợ in hình theo yêu cầu và kích thước linh hoạt, giúp bạn dễ dàng sở hữu bức tranh như mong muốn.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {%- endif -%}
+
 							{%- if settings.promotion_hrvapp_use and settings.promotion_hrvapp == 'appcombo' -%}
 							<div class="product-container-bg productDetail--app-combo mb-10 d-none">
 								<div class="productDetailjs productDetail--box box-detail-app mg-top" id="detail-combo">
