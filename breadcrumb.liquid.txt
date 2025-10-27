@@ -8,12 +8,12 @@
 			</li>
 			{% if template contains 'page' %}
 			<li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-				<span itemprop="item" content="{{shop.url}}{{page.url}}"><strong itemprop="name">{{ page.title }}</strong></span>
+				<span itemprop="item" content="{{shop.url}}{{page.url}}"><span itemprop="name">{{ page.title }}</span></span>
 				<meta itemprop="position" content="2" />
 			</li>
 			{% elseif template contains 'search' %}
 			<li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" >
-				<span itemprop="item" content="{{shop.url}}/search?&q={{search.terms | strip_html | escape}}"><strong itemprop="name">Tìm kiếm</strong></span>
+				<span itemprop="item" content="{{shop.url}}/search?&q={{search.terms | strip_html | escape}}"><span itemprop="name">Tìm kiếm</span></span>
 				<meta itemprop="position" content="2" />
 			</li>
 			{% elseif template contains 'blog' %}		
@@ -28,7 +28,7 @@
 				{% for tag in blog.all_tags %}
 				{%assign a = tag | handleize%}
 				{% if blog.current_tag == a %}
-				<span itemprop="item" content="{{shop.url}}/blogs/all/tagged/{{ tag }}"><strong itemprop="name">{{ tag | escape }}</strong></span>
+				<span itemprop="item" content="{{shop.url}}/blogs/all/tagged/{{ tag }}"><span itemprop="name">{{ tag | escape }}</span></span>
 				{%break%}
 				{% endif %}
 				{% endfor %}			
@@ -36,7 +36,7 @@
 			</li>
 			{% else %}
 			<li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-				<span itemprop="item" content="{{shop.url}}/blogs/{{ blog.handle }}"><strong itemprop="name">{{ blog.title }}</strong></span>
+				<span itemprop="item" content="{{shop.url}}/blogs/{{ blog.handle }}"><span itemprop="name">{{ blog.title }}</span></span>
 				<meta itemprop="position" content="2" />
 			</li>
 			{% endif %}
@@ -48,29 +48,29 @@
 				<meta itemprop="position" content="2" />
 			</li>
 			<li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-				<span itemprop="item" content="{{shop.url}}{{ article.url }}"><strong itemprop="name">{{ article.title }}</strong></span>
+				<span itemprop="item" content="{{shop.url}}{{ article.url }}"><span itemprop="name">{{ article.title }}</span></span>
 				<meta itemprop="position" content="3" />
 			</li>
 			{% elseif template contains 'list-collections' %}
 			<li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-				<span itemprop="item" content="{{shop.url}}/collections"><strong itemprop="name">Danh mục</strong></span>
+				<span itemprop="item" content="{{shop.url}}/collections"><span itemprop="name">Danh mục</span></span>
 				<meta itemprop="position" content="2" />
 			</li>
 			{% elseif template contains 'collection' and collection.handle %}
 			{% if current_tags %}
 			<li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-				<span itemprop="item" content="{{shop.url}}/collections/all/{{ current_tags | escape | handleize }}">	Tag: <strong itemprop="name">"{{ current_tags.first | capitalize | replace: 'Author_', ''  | escape}}"</strong></span>
+				<span itemprop="item" content="{{shop.url}}/collections/all/{{ current_tags | escape | handleize }}">	Tag: <span itemprop="name">"{{ current_tags.first | capitalize | replace: 'Author_', ''  | escape}}"</span></span>
 				<meta itemprop="position" content="2" />
 			</li>
 			{% else %}
 			{% if collection.handle == 'all' %}
 			<li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-				<span itemprop="item" content="{{shop.url}}/collections/{{collection.handle}}"><strong itemprop="name">Tất cả sản phẩm</strong></span>
+				<span itemprop="item" content="{{shop.url}}/collections/{{collection.handle}}"><span itemprop="name">Tất cả sản phẩm</span></span>
 				<meta itemprop="position" content="2" />
 			</li>
 			{% else %}
 			<li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-				<span itemprop="item" content="{{shop.url}}/collections/{{collection.handle}}"><strong itemprop="name">{{ collection.title }}</strong></span>
+				<span itemprop="item" content="{{shop.url}}/collections/{{collection.handle}}"><span itemprop="name">{{ collection.title }}</span></span>
 				<meta itemprop="position" content="2" />
 			</li>
 			{% endif %}
@@ -87,18 +87,18 @@
 			{% endif %}
 			<li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 				<span itemprop="item" content="{{shop.url}}{{ product.url }}">
-					<strong itemprop="name">{{ product.title }}</strong>
+					<span itemprop="name">{{ product.title }}</span>
 				</span>
 				<meta itemprop="position" content="3" />
 			</li>
 			{% elseif template contains 'cart' %}
 			<li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" >
-				<span itemprop="item" content="{{shop.url}}/cart"><strong itemprop="name">Giỏ hàng ({{ cart.item_count }})</strong></span>
+				<span itemprop="item" content="{{shop.url}}/cart"><span itemprop="name">Giỏ hàng ({{ cart.item_count }})</span></span>
 				<meta itemprop="position" content="2" />
 			</li>
 			{% elseif template contains "404" %}
 			<li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-				<span itemprop="item" content="{{ canonical_url }}"><strong itemprop="name">Lỗi 404</strong></span>
+				<span itemprop="item" content="{{ canonical_url }}"><span itemprop="name">Lỗi 404</span></span>
 				<meta itemprop="position" content="2" />
 			</li>
 			{% elseif template contains "customers[account]" %}
@@ -124,7 +124,7 @@
 			<li class="active"><span>{{ order.name }}</span></li>
 			{% else %}		
 			<li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" >
-				<span itemprop="item" content=""><strong itemprop="name">{{ page_title | escape }}</strong></span>
+				<span itemprop="item" content=""><span itemprop="name">{{ page_title | escape }}</span></span>
 				<meta itemprop="position" content="2" /></li>
 			{% endif %}
 		</ol>
