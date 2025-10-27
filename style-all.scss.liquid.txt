@@ -58,7 +58,7 @@ h1,h2,h3,h4,h5,h6 { margin:0 0 13px 0; line-height:1.2}
 a {color:var(--shop-color-text);text-decoration: none; outline: none; -moz-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out;-webkit-transition: all 0.3s ease-in-out;transition: all 0.3s ease-in-out;}
 a:hover,a:focus{color: var(--shop-color-hover);text-decoration: none; outline: none;}	
 a:active { outline: none; }
-strong { font-weight: 700; }
+strong { font-weight: 500; }
 em { font-style: italic; }
 textarea{resize: none;}
 /* 1.5 - Lists */
