@@ -45,7 +45,7 @@ $colorDesc: {{settings.collection_desc_color}};
 }
 
 /* ---------- Alerts nhỏ ---------- */
-.collection-alert-no{ font-size: 14px; padding: 10px 0; }
+.collection-alert-no{ font-size: 18px; padding: 10px 0; }
 .collection-alert-no p{ margin: 0; }
 
 /* ---------- Khung trang collection ---------- */
