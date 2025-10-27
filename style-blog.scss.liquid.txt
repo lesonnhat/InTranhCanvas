@@ -44,9 +44,9 @@
 	.article-detail {padding: 15px 20px;}
 	.article-title .post-title {font-size:20px;}
 	.article-title .post-title a {@extend %text-line-clamp2;}
-	.article-detail .entry-content {font-size:16px;margin-bottom: 8px;@extend %text-line-clamp2;}
+	.article-detail .entry-content {font-size:17px;margin-bottom: 8px;@extend %text-line-clamp2;}
 	.article-post-meta {
-		font-size: 13px;color: #74839f;margin:0 0 5px;
+		font-size: 15px;color: #74839f;margin:0 0 5px;
 		a {color: #757575;}
 		a:hover {color:var(--shop-color-hover);}
 		span {position: relative;}
@@ -339,7 +339,7 @@
 .list-blogs-latest {counter-reset: post-ranking;}
 .list-blogs-latest .item-article {border: none;border-bottom: 1px #efefef dotted;padding: 15px 0;margin: 0;}
 .list-blogs-latest .item-article:last-child{border-bottom:none;}
-.list-blogs-latest .item-article .post-image {width: 100px;padding-right: 10px;float: left;position: relative;}
+.list-blogs-latest .item-article .post-image {width: 110px;padding-right: 10px;float: left;position: relative;}
 .list-blogs-latest .item-article .post-image:before {position: absolute;
 	content: counter(post-ranking);
 	top: calc(50% - 16px);
@@ -355,10 +355,10 @@
 	font-size: 12px;counter-increment: post-ranking;
 	z-index: 1;
 }
-.list-blogs-latest .item-article .post-content {width: calc(100% - 100px);float: left;}
-.list-blogs-latest .item-article .post-content h3 {margin: 0 0 5px;font-size: 13px;font-weight: 500;}
+.list-blogs-latest .item-article .post-content {width: calc(100% - 110px);float: left;}
+.list-blogs-latest .item-article .post-content h3 {margin: 0 0 5px;font-size: 16px;font-weight: 500;}
 .list-blogs-latest .item-article .post-content h3 a{@extend %text-line-clamp2;}
-.list-blogs-latest .item-article .post-content .post-meta {font-size: 12px;margin:0;}
+.list-blogs-latest .item-article .post-content .post-meta {font-size: 15px;margin:0;}
 .list-blogs-latest .item-article .post-content .post-meta .date {color: #74839f;}
 
 
@@ -368,7 +368,7 @@
 .menuList-links li a:hover,.menuList-links li a:focus{color:var(--shop-color-hover);}
 .menuList-links > li{border-bottom: 1px dashed var(--shop-color-border);}
 .menuList-links > li:last-child{border-bottom: none;}
-.menuList-links > li > a {padding:12px 0;font-weight: 500;font-size: 15px;}
+.menuList-links > li > a {padding:12px 0;font-weight: 500;font-size: 17px;}
 .menuList-links > li.has-submenu >a{padding-right:30px}
 .menuList-links > li.has-submenu span.icon-plus-submenu {	width: 25px;height:25px;cursor: pointer;position: absolute;right: 0;top: 0;bottom: 0;margin: auto;border: 1px solid transparent;}
 .icon-plus-submenu:after,.icon-plus-submenu:before {
@@ -391,9 +391,10 @@ li.has-submenu.level1 > ul.submenu-links li a{padding-left:25px;}
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.08);
 	border-radius: 3px;
 	.sidebox-title{
+    background: #f5f5f5;
 		padding: 15px 20px;
 		h3 {
-			font-size: 16px;
+			font-size: 18px;
 			margin-bottom: 0;
 			position: relative;
 			cursor: pointer;
