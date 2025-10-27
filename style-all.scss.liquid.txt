@@ -582,8 +582,8 @@ transition: opacity 1s ease;
 		min-height: 65vh; 
 	}
 }
-/*======== coupon -- popover ==========*/
 
+/*======== coupon -- popover ==========*/
 .coupon-popover{			
 	margin-left: 15px;
 	margin-right: 15px;
