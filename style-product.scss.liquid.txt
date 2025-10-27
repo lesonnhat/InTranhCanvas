@@ -17,7 +17,7 @@ $colorText: {{settings.shop_text_color}};
 	}
 }
 .section-product-policy{
-	padding: 40px 0;
+	padding: 20px 0;
 	.policy-item{
 		border: 1px solid var(--shop-color-border);
 		padding: 30px 15px;height: 100%;
