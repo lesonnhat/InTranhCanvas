@@ -4039,7 +4039,7 @@ background-image: none;
 	.header-wrap-menu{flex: 1;
 		.navbar-mainmenu{text-align: center;}  
 		.menuList-main{
-			margin:0;
+			margin: 5px 0;
 			&>li {
 				display: inline-block;margin:0 10px;position: relative;
 				&:before{
@@ -4366,7 +4366,7 @@ background-image: none;
 
 	@media(min-width:992px){
 		.header-wrap-logo{
-			a img{max-width:210px;max-height:70px;}	
+			a img{max-width:240px;max-height:70px;}	
 			.wrap-logo,
 			&.wrap-logo-sticky .wrap-logo {	min-width: 100px;	}
 		}
