@@ -501,7 +501,7 @@
 "show_google_maps": false,
 
 
-"google_maps_code": "<iframe  class=\"lazyload\" data-src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.615593436863!2d106.65415201477133!3d10.76408024232994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752eec7752c743%3A0xd832d71bd12b6a15!2zRmxlbWluZ3RvbiBUb3dlciwgMTgyIEzDqiDEkOG6oWkgSMOgbmgsIHBoxrDhu51uZyAxNSwgUXXhuq1uIDExLCBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1521530731757\" width=\"100%\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>",
+"google_maps_code": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.708747293947!2d105.83878707627869!3d21.004308988615936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac77667af465%3A0xf7f8eced91353e9d!2zMzUgxJAuIEdp4bqjaSBQaMOzbmcsIFBoxrDGoW5nIE1haSwgSGFpIELDoCBUcsawbmcsIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1761387360066!5m2!1svi!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
 
 
 "footer_address": "Tầng 4, tòa nhà Flemington, số 182, đường Lê Đại Hành, phường 15, quận 11, Tp. Hồ Chí Minh.",
@@ -573,16 +573,16 @@
 "footer_about_information": "",
 
 
-"footer-address": "123 Nguyễn Thị Minh Khai, phường 3, quận 3, Tp. Hồ Chí Minh",
+"footer-address": "Số 35 Giải Phóng, Bạch Mai, Hà Nội",
 
 
-"footer-tell": "1900 636 001",
+"footer-tell": "0838 33 35 37",
 
 
 "footer-fax": "1900.636.099",
 
 
-"footer-email": "hi@lovemade.abc",
+"footer-email": "info@inthanhdat.com",
 
 
 "footer_logobct_show": false,
@@ -591,7 +591,7 @@
 "footer_linklist1_show": "1",
 
 
-"footer_linklist1_title": "Về Lovemade",
+"footer_linklist1_title": "Về Thành Đạt",
 
 
 "footer_linklist1_menu": "main-menu",
@@ -879,7 +879,7 @@
 "blogs_news_show": true,
 
 
-"blogs_news_title": "Bài viêt mới nhất",
+"blogs_news_title": "Bài viết mới nhất",
 
 
 "blogs_paralax_breadcrumb": "https://file.hstatic.net/1000397797/file/breadcrumb-min_6de21758d1ad41fbacb6983bde9bc3c0.jpg",
@@ -1086,7 +1086,7 @@
 "contact_email": " hi@theswan.abc",
 
 
-"contact_time": "- Thứ 2 đến thứ 7: 8h - 20h\n- Chủ nhật: 10h - 16h",
+"contact_time": "- Thứ 2 - Thứ 7 (từ 8h - 18h30)\n- Chủ Nhật (từ 8h00 - 17h00)",
 
 
 "contact_phone": "1900.000.XXX",
@@ -6030,13 +6030,13 @@
 "type_limit": "5",
 
 
-"contact_address_2": "- 456 Nguyễn Lương Bằng, phường Tân Hưng, quận 7, Tp. Hồ Chí Minh",
+"contact_address_2": "",
 
 
 "contact_address_3": "",
 
 
-"contact_phone_2": "1900 636 002",
+"contact_phone_2": "",
 
 
 "contact_phone_3": "",
@@ -8499,22 +8499,22 @@
 "header_banner_contact.jpg": "",
 
 
-"header_banner_contact_bg": "#ffffff",
+"header_banner_contact_bg": "#f2f2f2",
 
 
 "header_banner_contact_color": "#222222",
 
 
-"contact_address_title": "Địa chỉ",
+"contact_address_title": "Địa chỉ:",
 
 
-"contact_address_1": "- 123 Nguyễn Thị Minh Khai, phường 3, quận 3, Tp. Hồ Chí Minh",
+"contact_address_1": "Số 35 Giải Phóng, Bạch Mai, Hà Nội",
 
 
 "contact_phone_title": "Hotline:",
 
 
-"contact_phone_1": "1900 636 001",
+"contact_phone_1": "0838 33 35 37",
 
 
 "contact_email_title": "Email:",
@@ -8538,7 +8538,7 @@
 "contact_info_desc": "Bạn có thắc mắc hoặc muốn liên hệ với chúng tôi ngay hôm nay để được tư vấn chuyên sâu và chăm sóc chất lượng hàng đầu.",
 
 
-"contact_email_1": "hi@lovemade.abc",
+"contact_email_1": "info@inthanhdat.com",
 
 
 "contact_email_2": "",
@@ -9042,7 +9042,7 @@
 "about_us_about_2_desc": "Mỗi sản phẩm được kiểm tra tỉ mỉ ở từng công đoạn, từ in ấn đến đóng gói. Vải canvas bền màu, khung gỗ chắc chắn và mực in an toàn giúp tranh giữ màu lâu, hình ảnh rõ nét và bền đẹp theo thời gian – đó là cam kết chất lượng mà Thành Đạt luôn duy trì.",
 
 
-"contact_form_desc": "Bạn có thắc mắc về sản phẩm của chúng tôi, hoặc cần thêm thông tin, hãy để lại lời nhắn, chúng tôi sẽ liên hệ lại ngay.",
+"contact_form_desc": "Nếu bạn có thắc mắc gì, có thể gửi yêu cầu cho chúng tôi, và chúng tôi sẽ liên lạc lại với bạn sớm nhất có thể.",
 
 
 "contact_time_title": "Giờ mở cửa",
