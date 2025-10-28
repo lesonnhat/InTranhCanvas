@@ -29,7 +29,7 @@ $colorText: {{settings.shop_text_color}};
 			.icon img{max-height: 26px;}
 			.title{font-size: 20px;}
 		}
-		.item-desc{font-size: 16px;color: rgba($colorText, 0.7);margin: 10px 0 0;}
+		.item-desc{font-size: 17px;color: rgba($colorText, 0.7);margin: 10px 0 0;}
 		&:hover{
 			.item-header .icon img{
 				-webkit-animation: policy 1.2s linear;
@@ -45,7 +45,7 @@ $colorText: {{settings.shop_text_color}};
 		.row{gap: 15px 0;}
 		.policy-item{padding: 20px 10px;
 			.item-header .title{font-size: 18px;}
-			.item-desc{font-size: 14px;}
+			.item-desc{font-size: 16px;}
 		}
 	}
 }
