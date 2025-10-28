@@ -184,7 +184,7 @@ $colorText: {{settings.shop_text_color}};
 			margin-bottom: 0;
 		}
 		.productDetail--content .product-deliverly {
-			padding: 15px 0 0;
+			padding: 20px 0 0;
 		}
 		.combo-info--vertical {
 			.combo-info--content {

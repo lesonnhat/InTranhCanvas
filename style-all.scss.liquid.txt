@@ -3136,7 +3136,7 @@ li.has-submenu.level2 > ul.submenu-links li a{padding-left:35px;}
 }
 .productDetail--content{
 	.wrapbox-detail {padding: 0 15px;background: #fff;}
-	.wrapbox-detail > [class*='product-']{margin-bottom:15px;}
+	.wrapbox-detail > [class*='product-']{margin-bottom:20px;}
 	.product-heading h1{font-size: 24px;margin-bottom: 5px;}
 	.product-heading span + span:before {
 		content: " ";
