@@ -378,18 +378,40 @@
               <div class="product-deliverly">	
                 <div class="deliverly-inner">
                   <div class="infoList-deliverly-single">
+              
+                    <!-- 1️⃣ Hỗ trợ in hình theo yêu cầu -->
                     <div class="deliverly-item-single">
-                      <!-- Icon: dùng inline SVG để sắc nét, không phụ thuộc asset -->
                       <span class="deliverly-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                          <path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6l7-3z" stroke="#3B82F6" stroke-width="1.5" fill="#DBEAFE"/>
-                          <path d="M8.5 12.5l2.5 2.5 4.5-5" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        <!-- Like (thumb up) – nét mảnh, bo tròn, màu amber -->
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <!-- ngón tay cái -->
+                          <path d="M2.75 10.5h3.5a.75.75 0 0 1 .75.75v8.5a.75.75 0 0 1-.75.75h-3.5a.75.75 0 0 1-.75-.75v-8.5a.75.75 0 0 1 .75-.75Z"
+                                fill="#FFF7ED" stroke="#F59E0B" stroke-width="1.5" />
+                          <!-- bàn tay + thân -->
+                          <path d="M7 10.5l3.8-6.3a2 2 0 0 1 1.7-.9h.5c1.1 0 2 .9 2 2v3.2h4.7c1.1 0 2 .9 2 2l-1.2 8a2.5 2.5 0 0 1-2.5 2.2H7V10.5Z"
+                                fill="#FFF7ED" stroke="#D97706" stroke-width="1.5" stroke-linejoin="round"/>
                         </svg>
                       </span>
                       <div class="deliverly-text">
                         Hỗ trợ in hình theo yêu cầu và kích thước linh hoạt, giúp bạn dễ dàng sở hữu bức tranh như mong muốn.
                       </div>
                     </div>
+
+                    <!-- 2️⃣ Bảo hành & Giao hàng toàn quốc -->
+                    <div class="deliverly-item-single">
+                      <span class="deliverly-icon">
+                        <!-- Icon: khiên có dấu tick -->
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" stroke="#3B82F6" stroke-width="1.5" fill="#DBEAFE"/>
+                          <path d="M8.5 12.5l2.5 2.5 4.5-5" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                      <div class="deliverly-text">
+                        Bảo hành chu đáo & Giao hàng toàn quốc.<br>
+                        <a href="https://intranhcanvas.vn/pages/chinh-sach-khach-hang" class="deliverly-link" target="_blank">Xem chi tiết ›</a>
+                      </div>
+                    </div>
+              
                   </div>
                 </div>
               </div>

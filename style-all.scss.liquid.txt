@@ -6338,26 +6338,50 @@ background-image: none;
   color: #fff !important;
 }
 
-/* Box deliverly rút gọn một dòng, icon căn đỉnh */
+/* Box chung */
 .infoList-deliverly-single {
   border: 1px solid #eee;
   border-radius: 8px;
   padding: 16px;
   background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
+
+/* Mỗi dòng */
 .deliverly-item-single {
   display: flex;
-  align-items: flex-start; /* căn phía trên */
-  gap: 18px;
+  align-items: flex-start;
+  gap: 14px;
 }
+
 .deliverly-item-single .deliverly-icon {
   flex: 0 0 auto;
   line-height: 0;
 }
+
 .deliverly-item-single .deliverly-text {
-  font-size: 18px;
+  font-size: 16.5px;
   line-height: 1.6;
   color: #111827;
+}
+
+/* Link “Xem chi tiết” */
+.deliverly-text .deliverly-link {
+  color: #2563EB;
+  font-weight: 500;
+  text-decoration: none;
+}
+.deliverly-text .deliverly-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive: thu nhỏ font trên mobile */
+@media (max-width: 767px) {
+  .deliverly-item-single .deliverly-text {
+    font-size: 15px;
+  }
 }
 
 /* Tăng khoảng cách phía trên tiêu đề ở mobile */
