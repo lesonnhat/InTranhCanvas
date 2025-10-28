@@ -9,7 +9,7 @@ PAGE FAQS
 		.intro-banner {margin-bottom: 20px;}
 		.intro-desc {margin-bottom: 60px;font-size: 16px;}
 		.intro-list-faqs {
-			font-size: 16px;
+			font-size: 18px;
 			.faq-item {margin-bottom: 20px;}
 			.header-faqs {
 				font-weight: 600;
