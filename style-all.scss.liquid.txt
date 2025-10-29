@@ -6390,3 +6390,16 @@ background-image: none;
     margin-top: 20px;   /* chỉnh 12–24px theo ý */
   }
 }
+
+/* ==== FIX: màu số điện thoại trên mobile (Safari/iOS) ==== */
+mainFooter .address-footer a[href^="tel"],
+footer .address-footer a[href^="tel"] {
+  color: #fff !important;          /* đồng bộ màu chữ trắng */
+  text-decoration: none !important;
+}
+
+mainFooter .address-footer a[href^="tel"]:hover,
+footer .address-footer a[href^="tel"]:hover {
+  color: #fff !important;          /* giữ trắng khi hover */
+  text-decoration: underline;
+}
