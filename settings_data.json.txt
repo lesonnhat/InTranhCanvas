@@ -495,7 +495,7 @@
 "collection_sortby": true,
 
 
-"collection_pagination_limit": "8",
+"collection_pagination_limit": "16",
 
 
 "show_google_maps": false,
@@ -591,10 +591,10 @@
 "footer_linklist1_show": "1",
 
 
-"footer_linklist1_title": "Về Thành Đạt",
+"footer_linklist1_title": "LIÊN KẾT",
 
 
-"footer_linklist1_menu": "main-menu",
+"footer_linklist1_menu": "lien-ket",
 
 
 "footer_main_show": true,
@@ -870,10 +870,10 @@
 "blogs_menu_show": "1",
 
 
-"blogs_menu_title": "Danh mục bài viết",
+"blogs_menu_title": "DANH MỤC SẢN PHẨM",
 
 
-"blogs_menu_category": "main-menu",
+"blogs_menu_category": "san-pham-noi-bat",
 
 
 "blogs_news_show": true,
@@ -927,7 +927,7 @@
 "addthis_icon1_tootlip": "Gọi ngay cho chúng tôi",
 
 
-"addthis_icon1_action": "1900636099",
+"addthis_icon1_action": "0838333537",
 
 
 "addthis_icon2_show": "1",
@@ -942,10 +942,10 @@
 "addthis_icon2_tootlip": "Chat với chúng tôi qua Zalo",
 
 
-"addthis_icon2_action": "https://zalo.me/0901866099",
+"addthis_icon2_action": "https://zalo.me/0838333537",
 
 
-"addthis_icon3_show": "1",
+"addthis_icon3_show": false,
 
 
 "addthis_icon3_color1": "#70f3ff",
@@ -1761,19 +1761,19 @@
 "footer_social_title": "Follow Us",
 
 
-"social_link_facebook": "/",
+"social_link_facebook": "https://www.facebook.com/xuongtranhthanhdat",
 
 
 "social_link_twitter": "/",
 
 
-"social_link_instagram": "/",
+"social_link_instagram": "https://www.instagram.com/congtyinthanhdat",
 
 
 "social_link_google": "/",
 
 
-"social_link_youtube": "/",
+"social_link_youtube": "https://www.youtube.com/@congtyinthanhdat",
 
 
 "home_blog_show": true,
@@ -2355,10 +2355,10 @@
 "footer_linklist2_show": true,
 
 
-"footer_linklist2_title": "Chính sách",
+"footer_linklist2_title": "DANH MỤC",
 
 
-"footer_linklist2_menu": "main-menu",
+"footer_linklist2_menu": "san-pham-noi-bat",
 
 
 "footer_linklist3_show": false,
@@ -5649,64 +5649,64 @@
 "ldpprod_ecosystem_6_desc": "Lorem ipsum dolor sit amet. Et voluptas optio sit officiis aliquid sit atque fuga est porro veritatis et quia quidem hic voluptatem sint est nihil praesentium. A incidunt nobis et voluptatem galisum cum quos molestiae A incidunt nobis et voluptatem galisum cum quos molestiae voluptatem galisum cum quos molestiae  veritatis et quia quidem hic voluptatem sint est nihil praesentium",
 
 
-"faqs_1_title": "Làm thế nào để tôi đặt hàng online?",
+"faqs_1_title": "🖼️ Bảo hành & Đổi trả",
 
 
-"faqs_1_desc": "The swan rất vui lòng hỗ trợ khách hàng đặt hàng online bằng một trong những cách đặt hàng sau:\n<br>\n- Truy cập trang web: The swan\n<br>\n- Gửi email đặt hàng về địa chỉ: hi@theswan.com\n<br>\n- Liên hệ số hotline: 1900.636.000 để đặt sản phẩm\n<br>\n- Chat với tư vấn viên trên fanpage của The swan",
+"faqs_1_desc": "<p><em>(Cập nhật: 28/10/2025)</em></p><p>Từng bức tranh canvas tại <strong>Thành Đạt</strong> đều được in bằng chất liệu cao cấp, khung gỗ chắc chắn và màu in bền đẹp. Chúng tôi cam kết mang đến cho bạn sản phẩm hoàn thiện nhất.</p><p><span style=\"color:#0a5d5d\"><strong>1. Cam kết chất lượng</strong></span></p><p>Chúng tôi chịu trách nhiệm 100% nếu tranh sai kích thước, sai hình, lệch màu nặng, canvas nhăn, khung cong vênh hoặc lỗi do sản xuất/vận chuyển. Mọi chi phí in lại hoặc đổi mới đều miễn phí.</p><p><span style=\"color:#0a5d5d\"><strong>2. Khi cần hỗ trợ</strong></span></p><p>Vui lòng phản hồi <strong>trong 24h</strong> sau khi nhận tranh qua Zalo<strong> 0838.33.35.37</strong> hoặc email<strong> <a rel=\"noopener\"><span style=\"color:#343434\">hotrodichvu.inthanhdat@gmail.com</span></a></strong>, kèm hình ảnh/video và mã đơn hàng để được xử lý nhanh nhất.</p><p><strong>3. Trường hợp không áp dụng</strong></p><p>Không áp dụng đổi trả với các lỗi:<br /><strong>•&nbsp;</strong>File thiết kế gốc mờ, vỡ hạt hoặc sai nội dung do khách cung cấp.<br /><strong>•&nbsp;</strong>Tranh bị ẩm mốc, phai màu, cong vênh do bảo quản sai cách.<br /><strong>•&nbsp;</strong>Khách thay đổi mẫu hoặc kích thước sau khi duyệt in.</p><p><span style=\"color:#0a5d5d\"><strong>4. Phương án xử lý</strong></span></p><p>Nếu xác minh lỗi từ Thành Đạt:<br /><strong>•&nbsp;</strong>In lại &amp; giao mới miễn phí.<br /><strong>•&nbsp;</strong>Hoặc giảm giá/hoàn tiền theo thỏa thuận.</p><p><span style=\"color:#0a5d5d\"><strong>5. Hướng dẫn bảo quản</strong></span></p><p><strong>•&nbsp;</strong>Tránh ánh nắng trực tiếp, ẩm mốc, nguồn nhiệt cao.<br /><strong>•&nbsp;</strong>Lau khô nhẹ bằng khăn mềm, không dùng nước hoặc hóa chất.<br /><strong>•&nbsp;</strong>Treo nơi khô thoáng để giữ màu sắc và độ căng của tranh.</p>",
 
 
-"faqs_2_title": "Nếu tôi đặt hàng trực tuyến có những rủi ro gì không?",
+"faqs_2_title": "🚚 Vận chuyển & Giao hàng",
 
 
-"faqs_2_desc": "Với The swan, khách hàng không phải lo lắng, vì chúng tôi cam kết cung cấp sản phẩm chất lượng tốt, giá cả phải chăng. Đặc biệt, khách hàng sẽ nhận được sản phẩm và thanh toán cùng một thời điểm.",
+"faqs_2_desc": "<p><em>(Cập nhật: 28/10/2025)</em></p><p>Tại <strong>Tranh Canvas Thành Đạt</strong>, chúng tôi hiểu rằng mỗi bức tranh không chỉ là sản phẩm trang trí mà còn mang giá trị tinh thần của bạn. Vì vậy, mọi quy trình đóng gói và vận chuyển đều được thực hiện cẩn trọng để tranh đến tay bạn <strong>an toàn – đúng hẹn – đúng chất lượng.</strong></p><hr /><p><span style=\"color:#0a5d5d\"><strong>1. Đóng gói an toàn</strong></span></p><p><strong>•&nbsp;</strong>Tranh được bọc màng co chống ẩm, chèn xốp, thùng carton cứng.<br /><strong>•&nbsp;</strong>Tranh khung lớn có góc xốp bảo vệ tránh cong, móp.<br /><strong>•&nbsp;</strong>Mỗi kiện hàng đều được kiểm tra hình ảnh, khung và bề mặt canvas trước khi gửi.</p><hr /><p><span style=\"color:#0a5d5d\"><strong>2. Hình thức &amp; thời gian giao hàng</strong></span></p><p><strong>•&nbsp;</strong>Nội thành Hà Nội: giao nhanh 1–4 giờ sau khi hoàn thiện (GrabExpress, Ahamove...).<br /><strong>•&nbsp;</strong>Toàn quốc: 2–5 ngày làm việc tùy khu vực.<br /><strong>•&nbsp;</strong>Phí ship báo chính xác khi xác nhận đơn; đơn lớn có thể hỗ trợ hoặc miễn phí giao hàng.</p><hr /><p><span style=\"color:#0a5d5d\"><strong>3. Khi nhận hàng – vui lòng kiểm tra ngay</strong></span></p><p><strong>•&nbsp;</strong>Kiểm tra kiện hàng (móp, rách, ướt, mở trước...) và trạng thái tranh (khung, màu, mặt canvas).<br /><strong>•&nbsp;</strong>Việc ký nhận đồng nghĩa sản phẩm bên ngoài đã nguyên vẹn. Sự cố sau đó rất khó xác minh để đổi.</p><hr /><p><span style=\"color:#0a5d5d\"><strong>4. Khi cần khiếu nại hoặc hỗ trợ</strong></span></p><p><strong>•&nbsp;</strong>Báo lỗi trong 24 giờ kể từ khi nhận hàng.<br /><strong>•&nbsp;</strong>Gửi hình/video qua Zalo <strong>0838.33.35.37</strong> hoặc email <strong>hotrodichvu.inthanhdat@gmail.com</strong><br />&nbsp;(kèm mã đơn hàng).<br /><strong>•&nbsp;</strong>Giữ lại sản phẩm lỗi để xác minh.<br /><strong>•&nbsp;</strong>Phản hồi &amp; hướng xử lý trong <strong>4–8 giờ</strong> làm việc.</p><hr /><p><span style=\"color:#0a5d5d\"><strong>5. Hướng xử lý &amp; cam kết</strong></span></p><p>Nếu lỗi thuộc về Thành Đạt:</p><p><strong>•&nbsp;</strong>In lại &amp; giao mới miễn phí, hoặc<br /><strong>•&nbsp;</strong>Hoàn tiền / giảm giá theo thỏa thuận.</p><p>Chúng tôi luôn giải quyết nhanh – minh bạch – thiện chí, đảm bảo quyền lợi cao nhất cho khách hàng.</p>",
 
 
-"faqs_3_title": "Nếu tôi mua sản phẩm với số lượng nhiều thì giá có được giảm không?",
+"faqs_3_title": "",
 
 
-"faqs_3_desc": "Khi mua hàng với số lượng nhiều khách hàng sẽ được hưởng chế độ ưu đãi, giảm giá ngay tại thời điểm mua hàng. \n<br>\nKhách hàng vui lòng liên hệ Mode để được hỗ trợ trực tiếp qua số điện thoại: 1900.636.000",
+"faqs_3_desc": "",
 
 
-"faqs_4_title": "Quy đinh hoàn trả và đổi sản phẩm của Mode như thế nào?",
+"faqs_4_title": "",
 
 
-"faqs_4_desc": "Khách hàng vui lòng tham khảo chính sách đổi trả sản phẩm của The swan để được cung cấp thông tin đầy đủ và chi tiết nhất.\n<br>\nLưu ý: Đối với dòng sản phẩm túi và giày điều kiện đổi trả được thực hiện trong vòng 30 ngày kể từ ngày nhận hàng và hàng hoá đảm bảo còn giữ nguyên tem nhãn sản phẩm. (chưa qua sử dụng)",
+"faqs_4_desc": "",
 
 
-"faqs_5_title": "Tôi mua hàng rồi, không vừa ý có thể đổi lại hay không? ",
+"faqs_5_title": "",
 
 
-"faqs_5_desc": "Khi mua hàng nếu khách hàng không vừa ý với sản phẩm, hãy cho The swan được biết, chúng tôi sẽ đổi ngay sản phẩm cho khách hàng. Chỉ cần đảm bảo sản phẩm chưa qua sử dụng, còn nguyên tem nhãn. Chúng tôi sẽ hỗ trợ đổi (size, màu, sản phẩm khác) cho khách hàng.",
+"faqs_5_desc": "",
 
 
-"faqs_6_title": "Tôi đã chọn hình thức thanh toán COD, nhưng khi hàng tới nơi, tôi không muốn lấy có được không?",
+"faqs_6_title": "",
 
 
-"faqs_6_desc": "The swan sẵn sàng nhận lại hàng và mong nhận được phản hồi từ quý khách.",
+"faqs_6_desc": "",
 
 
-"faqs_7_title": "Tôi phải trả phí vận chuyển tận nơi như thế nào?",
+"faqs_7_title": "",
 
 
-"faqs_7_desc": "Khách hàng sẽ được miễn phí 100% cước vận chuyển trong nước với đơn hàng trị giá trên 300.000vnd.",
+"faqs_7_desc": "",
 
 
-"faqs_8_title": "Tôi có được đổi sản phẩm mới hoặc hoàn trả tiền không?",
+"faqs_8_title": "",
 
 
-"faqs_8_desc": "Khi hàng hoá thoả điều kiện đổi/ trả, khách sẽ được đổi trả và hoàn tiền trong trường hợp trả hàng hoặc đổi hàng có giá trị thấp hơn",
+"faqs_8_desc": "",
 
 
-"faqs_9_title": "Nếu đổi trả tôi không mang theo hoá đơn và phiếu thông tin sản phẩm thì có được đổi trả không? ",
+"faqs_9_title": "",
 
 
-"faqs_9_desc": "Trường hợp, khách hàng không có hóa đơn hoặc phiếu thông tin sản phẩm, Mode vẫn linh động đổi hoặc trả sản phẩm thông qua Số điện thoại mà Khách hàng đã cung cấp lúc mua hàng.\n<br>\nKhách hàng vui lòng cung cấp Số điện thoại cho nhân viên bán hàng để đối soát lại với hệ thống để được hỗ trợ nhanh chóng. ",
+"faqs_9_desc": "",
 
 
-"faqs_10_title": "Khi đặt hàng online, tôi phải thanh toán như thế nào?",
+"faqs_10_title": "",
 
 
-"faqs_10_desc": " Mode cung cấp đến Khách hàng các hình thức thanh toán linh hoạt như\n<br>\n- COD: Thanh toán trực tiếp khi nhận hàng cho nhân viên bưu điện\n<br>\n- Chuyển khoản\n<br>\nCác hình thức ví điện tử khác",
+"faqs_10_desc": "",
 
 
 "product_faq_show": true,
@@ -5985,7 +5985,7 @@
 "freeship_show": true,
 
 
-"social_link_tiktok": "/",
+"social_link_tiktok": "https://www.tiktok.com/@congtyinthanhdat",
 
 
 "social_link_shopee": "/",
@@ -8646,7 +8646,7 @@
 "index_category_2_btn": "Xem ngay",
 
 
-"index_category_2_link": "/collections/chan-dung",
+"index_category_2_link": "/collections/tranh-chan-dung",
 
 
 "show_index_category_3": true,
@@ -8664,7 +8664,7 @@
 "index_category_3_btn": "Xem ngay",
 
 
-"index_category_3_link": "/collections/hoa-la",
+"index_category_3_link": "/collections/tranh-hoa-la",
 
 
 "index_category_2_color_1": "#aa8453",
@@ -8706,10 +8706,10 @@
 "index_policy_1_img.jpg": "",
 
 
-"index_policy_1_title": "Miễn phí vận chuyển",
+"index_policy_1_title": "Vận chuyển nhanh chóng",
 
 
-"index_policy_1_desc": "Với đơn hàng trên 1.000.000đ",
+"index_policy_1_desc": "Nội thành 1–4h, toàn quốc 2–5 ngày.",
 
 
 "show_index_policy_2": true,
@@ -8718,10 +8718,10 @@
 "index_policy_2_img.jpg": "",
 
 
-"index_policy_2_title": "Đổi trả 30 ngày",
+"index_policy_2_title": "Đổi mới miễn phí",
 
 
-"index_policy_2_desc": "Với sản phẩm lỗi hoặc kém chất lượng",
+"index_policy_2_desc": "Áp dụng khi sản phẩm lỗi kỹ thuật.",
 
 
 "show_index_policy_3": true,
@@ -8730,10 +8730,10 @@
 "index_policy_3_img.jpg": "",
 
 
-"index_policy_3_title": "Thanh toán bảo mật",
+"index_policy_3_title": "Thanh toán linh hoạt",
 
 
-"index_policy_3_desc": "Nhiều phương thức thanh toán đảm bảo an toàn.",
+"index_policy_3_desc": "Hỗ trợ chuyển khoản, COD, xuất hóa đơn.",
 
 
 "show_index_policy_4": true,
@@ -8742,10 +8742,10 @@
 "index_policy_4_img.jpg": "",
 
 
-"index_policy_4_title": "Chính sách hoàn tiền",
+"index_policy_4_title": "Khách hàng thân thiết",
 
 
-"index_policy_4_desc": "Cho thành viên membership hấp dẫn",
+"index_policy_4_desc": "Giảm giá đơn sau & quà tri ân giới thiệu.",
 
 
 "show_index_collection_1": true,
@@ -8793,7 +8793,7 @@
 "index_collection_banner_3_link": "#",
 
 
-"index_collection_1_title": "Sản phẩm mới tại Lovemade",
+"index_collection_1_title": "Sản phẩm mới tại Thành Đạt",
 
 
 "show_index_banner": true,
@@ -8811,7 +8811,7 @@
 "index_banner_1_btn": "Xem ngay",
 
 
-"index_banner_1_link": "/collections/phong-canh",
+"index_banner_1_link": "/collections/tranh-phong-canh",
 
 
 "show_index_banner_2": true,
@@ -8826,13 +8826,13 @@
 "index_banner_2_btn": "Xem ngay",
 
 
-"index_banner_2_link": "/collections/dong-vat",
+"index_banner_2_link": "/collections/tranh-dong-vat",
 
 
 "show_index_collection_tab": true,
 
 
-"index_collection_tab_title": "Đồ nội thất, trang trí, gia dụng",
+"index_collection_tab_title": "Các mẫu tranh được ưa thích",
 
 
 "index_collection_tab_btn": "Xem thêm sản phẩm",
@@ -8841,10 +8841,10 @@
 "show_index_collection_tab_1": true,
 
 
-"index_collection_tab_1_title": "SẢN PHẨM MỚI",
+"index_collection_tab_1_title": "TRANH PASTEL",
 
 
-"index_collection_tab_1_handle": "san-pham-moi",
+"index_collection_tab_1_handle": "tranh-pastel",
 
 
 "show_index_collection_tab_2": true,
@@ -8853,7 +8853,7 @@
 "index_collection_tab_2_title": "TRỪU TƯỢNG",
 
 
-"index_collection_tab_2_handle": "truu-tuong",
+"index_collection_tab_2_handle": "tranh-truu-tuong",
 
 
 "show_index_collection_tab_3": true,
@@ -8862,16 +8862,16 @@
 "index_collection_tab_3_title": "PHONG CẢNH",
 
 
-"index_collection_tab_3_handle": "phong-canh",
+"index_collection_tab_3_handle": "tranh-phong-canh",
 
 
 "show_index_collection_tab_4": true,
 
 
-"index_collection_tab_4_title": "ĐỘNG VẬT",
+"index_collection_tab_4_title": "MẪU TRANH MỚI",
 
 
-"index_collection_tab_4_handle": "dong-vat",
+"index_collection_tab_4_handle": "san-pham-moi",
 
 
 "index_review_title": "Khách hàng nói về Lovemade",
